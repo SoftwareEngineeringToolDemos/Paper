@@ -1,0 +1,155 @@
+\documentclass{sig-alternate-05-2015}
+
+
+\begin{document}
+
+\setcopyright{acmcopyright}
+
+\conferenceinfo{FSE '16}{November 13--19, 2016, Seattle, WA, USA}
+
+
+\title{A Doomsday Vault of Software Engineering Tools}
+\subtitle{Archiving Software Engineering Tools from ICSE and FSE 2011 through 2014}
+
+\numberofauthors{75}
+
+\author{
+\alignauthor
+Emerson Murphy-Hill\\
+       \affaddr{Department of Computer Science}\\
+       \affaddr{NC State University}\\
+       \affaddr{Raleigh, NC, USA 27695}\\
+       \email{emerson@csc.ncsu.edu}}
+
+\additionalauthors{Additional authors: 
+%Example:
+% John Smith (The Th{\o}rv{\"a}ld Group,
+% email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+% (The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).
+%Alphabetical:
+Shabbir Abdul (\url{sabdul@ncsu.edu}), 
+Varun Aettapu (\url{vaettap@ncsu.edu}), 
+Sumeet Agarwal (\url{sagarwa6@ncsu.edu}), 
+Sindhu Anangur Vairavel (\url{sanangu@ncsu.edu}), 
+Rishi Avinash Anne (\url{raanne@ncsu.edu}), 
+Haris Mahmood Ansari (\url{hmansari@ncsu.edu}), 
+Ankit Bhandari (\url{abhanda3@ncsu.edu}), 
+Anand Bhanu (\url{bhanua@ncsu.edu}), 
+Aditya Vinayak Bhise (\url{avbhise@ncsu.edu}), 
+Saikrishna Teja Bobba (\url{sbobba3@ncsu.edu}), 
+Vineela Boddula (\url{vboddul@ncsu.edu}), 
+Venkata Krishna Sailesh Bommisetti (\url{vbommis@ncsu.edu}), 
+Dwayne Christian (Chris) Brown (\url{dcbrow10@ncsu.edu}), 
+Peter Morgan Chen (\url{pmchen@ncsu.edu}), 
+Yi Chun (\url{Yi-Chun}) Chen (\url{ychen74@ncsu.edu}), 
+Nikhil Chinthapallee (\url{nchinth@ncsu.edu}), 
+Karan Singh Dagar (\url{kdagar@ncsu.edu}), 
+Joseph Decker (\url{jdecker@ncsu.edu}), 
+Pankti Rakeshkumar Desai (\url{prdesai2@ncsu.edu}), 
+Jayant Dhawan (\url{jdhawan2@ncsu.edu}), 
+Sarah Elizabeth Elder (\url{seelder@ncsu.edu}), 
+Shrenuj Gunvant Gandhi (\url{sgandhi4@ncsu.edu}), 
+Jennifer Michelle Green (\url{jmgree17@ncsu.edu}), 
+Mohammed Hasibul Hassan (\url{mhhassan@ncsu.edu}), 
+Satish Inampudi (\url{sinampu@ncsu.edu}), 
+Pragyan Paramita Jena (\url{ppjena@ncsu.edu}), 
+Bhargav Rahul (\url{Bhargav}) Jhaveri (\url{bjhaver@ncsu.edu}), 
+Apoorv Vijay Joshi (\url{avjoshi@ncsu.edu}), 
+Nikhil Josyabhatla (\url{njosyab@ncsu.edu}), 
+Sujith Katakam (\url{skataka@ncsu.edu}), 
+Juzer Husainy Khambaty (\url{jhkhamba@ncsu.edu}), 
+Aneesh Arvind Kher (\url{aakher@ncsu.edu}), 
+Craig Kimpel (\url{ckimpal@ncsu.edu}), 
+Siddhartha Kollipara (\url{skollip@ncsu.edu}), 
+Asish Prabhakar Kottala (\url{akottal@ncsu.edu}), 
+Abishek Kumar (\url{akumar21@ncsu.edu}), 
+Harini Reddy Kumbum (\url{hkumbum@ncsu.edu}), 
+Nitish Pradeep Limaye (\url{nplimaye@ncsu.edu}), 
+Apoorv Mahajan (\url{amahaja3@ncsu.edu}), 
+Sai Sindhur Malleni (\url{smallen3@ncsu.edu}), 
+Sudha Manchukonda (\url{smanchu@ncsu.edu}), 
+Kavit Maral Mehta (\url{kmmehta@ncsu.edu}), 
+Justin Alan Middleton (\url{jamiddl2@ncsu.edu}), 
+Ramakant Moka (\url{rmoka@ncsu.edu}), 
+Eesha Gopalakrishna Mulky (\url{egmulky@ncsu.edu}), 
+Gauri Naik (\url{gnaik2@ncsu.edu}), 
+Shraddha Anil Naik (\url{sanaik2@ncsu.edu}), 
+Yashwanth Nallabothu (\url{ynallab@ncsu.edu}), 
+Yogesh Nandakumar (\url{ynandak@ncsu.edu}), 
+Kairav Sai Padarthy (\url{kspadart@ncsu.edu}), 
+Pulkesh Kumar Yadav Pannalal (\url{ppannal@ncsu.edu}), 
+Sattwik Pati (\url{spati2@ncsu.edu}), 
+Kahan Prabhu (\url{kprabhu@ncsu.edu}), 
+Shashank Goud Pulimamidi (\url{spulima@ncsu.edu}), 
+Gargi Sandeep Rajadhyaksha (\url{gsrajadh@ncsu.edu}), 
+Priyadarshini Rajagopal (\url{prajago4@ncsu.edu}), 
+Venkatesh Sambandamoorthy (\url{vsamban@ncsu.edu}), 
+Mohan Sammeta (\url{msammet@ncsu.edu}), 
+Shaown Sarker (\url{ssarker@ncsu.edu}), 
+Anshita Sayal (\url{asayal@ncsu.edu}), 
+Vrushti Kamleshkumar Shah (\url{vkshah@ncsu.edu}), 
+Esha Sharma (\url{esharma2@ncsu.edu}), 
+Saurav Shekhar (\url{sshekha3@ncsu.edu}), 
+Sarthak Prabhakar Shetty (\url{spshetty@ncsu.edu}), 
+Manish Ramashankar Singh (\url{mrsingh@ncsu.edu}), 
+Ankush Kumar Singh (\url{asingh21@ncsu.edu}), 
+Vinay Kumar Suryadevara (\url{vksuryad@ncsu.edu}), 
+Sumit Kumar Tomer (\url{sktomer@ncsu.edu}), 
+Akriti Tripathi (\url{atripat4@ncsu.edu}), 
+Jennifer Tsan (\url{jtsan@ncsu.edu}), 
+Vivekananda Vakkalanka (\url{vvakkal@ncsu.edu}), 
+Alexander Valkovsky (\url{avalkov@ncsu.edu}), 
+Rishi Kumar Vardhineni (\url{rkvardhi@ncsu.edu}) and
+Manav Verma (\url{mverma4@ncsu.edu}).}
+%\date{30 July 1999}
+
+\maketitle
+\begin{abstract}
+Many innovative software engineering tools appear at the field's premier venues, the 
+International Software Engineering Conference (ICSE) and the 
+Foundations of Software Engineering (FSE).
+But what happens to these tools after they were presented?
+In this paper, we spend 10,000 hours %update with real number 
+trying to obtain, download, use, and repackage 150 %update
+tools from ICSE and FSE's tool demonstration tracks.
+Our results enumerate the practical and accidental reasons that
+software engineering tools fail to work over time,
+and provide practical implications for creating lasting tools.
+\end{abstract}
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002944.10011123.10010912</concept_id>
+<concept_desc>General and reference~Empirical studies</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[300]{General and reference~Empirical studies}
+
+\printccsdesc
+
+\keywords{Software engineering tools; replication}
+
+\section{Introduction}
+
+Some things
+
+\section{Conclusions}
+
+Some other things.
+
+%ACKNOWLEDGMENTS are optional
+%\section{Acknowledgments}
+
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\end{document}

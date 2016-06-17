@@ -139,26 +139,77 @@ and provide practical implications for creating lasting tools.
 
 \section{Introduction}
 
-What tool demos are.
-Why they're important.
+Sofware engineering research seeks to better
+understand software and how it is built and constructed.
+While such understanding in isolation can be insightful,
+ultimately a substantial amount of such research 
+aims to impact the practice of software engineering.
+To do so, researchers can create recommendations
+for new software engineering practices, can 
+create educational techniques and materials, 
+and can create tools.
 
-Why it's important that they last.
-- future work must built on past work
-- one other way to figure out what those in the past did and learned
+Arguably creating new tools is the most common
+way that sofware engineering researchers
+attempt to influence practice.
+% evidence? would be good to see what the primary contributions are of a recent ICSE or FSE?
+Broadly speaking, tools are software that can
+help design and build software.
+Examples include a tool that helps mobile application
+developers choose which devices to target~\cite{prada},
+a tool that checks the use of locks in multithreaded programs~\cite{ernst},
+and a tool that creates code from natural language text~\cite{desai}.
 
-why its hard to get tools to last.
-- no requirement for archiving tools
-- shifting platforms
-- data loss 
-- implicit information
+While papers describe tools in software engineering venues,
+there are several reasons why software engineering researchers 
+should make the tools themselves available.
+First, the full details of how the tool works, both in terms of its internals
+and from an end-user perspective, may not be clear from the paper.
+Second, making the tools available can help pracitioners try and adopt
+the tools in their work.
+Third, it helps facilitate reproducibility by enabling future researchers
+to perform studies with the original tools.
+Finally, it helps the advancement of the field by allowing others to build on 
+existing tools, rather than re-buiding them from scratch.
 
-in this paper, we contribute:
-- an evaluation of how difficult it is to get past tools working
-- re-package existing tools with an eye towards maximizing durability (do we need a word?)
+Despite the benefits of making tools available, in this paper
+we catalog the practical difficulties in doing so.
+We describe a study that examined the tools presented at the 
+premier venues for software engineering research over the 
+past several years.
+As part of a graduate university course on software engineering, 
+we spent 10,000 hours trying to obtain, download, use
+and repackage tools from the International Conference
+on Sofware Engineering (ICSE) and the Symposium on the Foundations
+of Software Engineering (FSE).
+In doing so, we make the following three main 
+contributions in this paper:
+
+\begin{itemize}
+  \item A study that evaluates the difficulty in getting tools 
+  		working across a variety of software engineering research.
+  \item A synergistic course project for graduate software engineering students 
+		that gives students meaningful educational value \emph{and}
+		provides the research community value.
+  \item XXX existing tools repackaged in automatically-built virtual machines
+  		to make it easier for others to use these tools.
+\end{itemize}
 
 \section{Related Work}
 
-Artifact evaluation committees. (SIGPLAN, where else?)
+timeliness
+
+General scientific interest in reproducibility.
+How it fits with other Rs.
+State of practice.
+
+Software reproducibility outside SE.
+Systems~\cite{collberg2016repeatability,proebsting2015repeatability}
+
+Others~\cite{kovacevic2007encourage,vandewalle2009reproducible,stodden2009enabling,klein2012run}.
+
+
+Arguably as SE researchers we should be the best!
 
 Other fields:
 - Data science (doing better - http://zenodo.org)
@@ -168,7 +219,18 @@ Other fields:
 - HPC doesn't (and maybe can't)
 - RTC is starting to do it, but maybe shouldn't
 
+`` We argue that, with some exceptions, anything less than the release of source programs is intolerable for results that depend on computation.''~\cite{ince2012case}.
+
 Constant worry is protecting IP in security and HPC
+
+Repeatability in AI-SE: ``depends on who does it''
+Reproducibility assessment for 2 papers, plus reproducibility overview~\cite{gonzalez2012reproducibility}
+
+
+While no studies of software reproducibility in our field,
+practical interest.
+
+Artifact evaluation committees. (SIGPLAN, where else?)
 
 
 \section{Research Questions}
@@ -186,7 +248,7 @@ respective tool demonstration tracks.
   \item What are the barriers to get tools to work in virtual machines?
 \end{enumerate}
 
-\section{Proceedure}
+\section{Procedure}
 
 No cost, but demos ok. (How many did this happen with?)
 

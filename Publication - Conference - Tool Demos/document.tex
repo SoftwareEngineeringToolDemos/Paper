@@ -360,17 +360,324 @@ There were several learning goals of the course project:
 In the remainder of this section, we describe project
 activities, requirements, and deliverables.
 
-\subsubsection{Team Formation, Tool Selection, and Tool Assignment}
+\subsubsection{Team Formation and Tool Selection}
+
+The instructor formed teams of about 5 students by randomly
+selecting about 4 on-campus students and possibly 1 off-campus, distance
+education student.
+
+During class, the instructor asked teams to find the ICSE
+and FSE demonstration tracks online, skim the papers from those
+tracks, and extract several pieces of information:
+the venue, the paper name, the tool name, any links to source
+code or binaries for the tools, the technologies involved in the 
+tool's creation, and a rough estimate of how 
+difficult the team thought it would be to get the tool working.
+Teams put this information on a shared spreadsheet with one row per paper.
+We collected papers from from 2014, the most recent year either ICSE or FSE
+papers will officially posted online, to 2009.
+In total, we collected 188 papers from 12 conferences.
+
+Teams were then given the opportunity to look over the list of
+tools, and identify tools they might want to work on.
+During the following class period, teams chose N tools to work on,
+where N was the number of people on the team.
+Each tool could be assigned to one and only one tool.
+
+Because some tools were in high demand and some in low demand, for fairness,
+teams chose tools in a round-robin draft,
+that is, one team chose a tool, then the next team chose a tool, and so on,
+until all teams had chosen one tool, and then the first team chooses a second
+tool, and the next team chooses a second tool, and so on.
+At the time of the draft, 100 students in the class, so the tools eligible
+for selection were the 100 most recent tools, which included all tools
+from 2012--2014, and a few from 2011.
 
 \subsubsection{Obtaining Tools}
 
+After teams were assigned tools, their first task was to 
+obtain the tools, including the source code, if possible,
+and the binary if not.
+For tools that were deployed (or partially deployed) via a web service, 
+students were required to obtain the source or binary for
+the service as well; in short, the students needed to
+obtain all software components necessary to run the tool
+in isolation. 
+
+Teams were instructed to first try to 
+obtain the tool from links in the paper itself or via
+the web.
+If teams could not find the tool, the teams
+were instructed to ask the authors, using an email
+template show in Figure~\ref{fig:email}.
+To minimize communication with the authors, 
+the email contained requests for several author
+piece of information, the need for which will become 
+clear later in this section.
+Students were instructed to customize this template,
+but to use it as a starting point. 
+Full instructions for use of this template can be found 
+online.\footnote{\url{https://docs.google.com/document/d/1dWvHS8gf37MgYafqOSl3BJzHYkdG1BHgDT4CYe_QN1I/edit?usp=sharing}}
+
+\begin{figure}[t]
+
+\noindent
+To: <AUTHORS OF PAPER, BUT NOT MORE THAN THE FIRST 5 AUTHORS>
+
+\noindent
+Subject: Regarding your tool, <TOOLNAME>
+
+\noindent
+Dear Dr. <LASTNAME> and colleagues,
+
+I enjoyed reading your paper <PAPER TITLE>. As part of a graduate software engineering 
+class at NC State University, my team has chosen to use the tool <TOOLNAME> as part of our 
+class project. In short, the class is using tools from the past few ICSEs and FSEs, then putting 
+all those tools in an accessible form (e.g., virtual machine) in central location. Our project is 
+supervised by Dr. Emerson Murphy-Hill (CC'd via ncsu-csc-510\@googlegroups.com). When our 
+project is complete, we plan on aggregating our results (e.g., how many tools could we get 
+working, how easy was it, etc) into a research paper.
+
+Because my grade rests on your tool, I am motivated to get it working. I have a few questions 
+for you before I get started.
+
+May I have permission to redistribute an executable version of your tool? Specifically, we plan 
+on putting your tool in a virtual machine, then posting that VM on the public internet.
+
+May I have permission to redistribute the source code for your tool? Specifically, I plan on 
+getting the tool building into the virtual machine (by way of Vagrant) and posting the build scripts 
+on GitHub.
+
+Could you please send me a link (or attachment) to the executable version of your tool? I have 
+attempted to find the tool on the internet, but have been unsuccessful.
+
+Could you please send me a link (or attachment) to the source code of your tool? I have 
+attempted to find it on the internet, but have been unsuccessful.
+
+I've had some trouble getting the tool to work... <describe what you tried, describe what you 
+expected to happen, describe what actually happened.>
+
+Thank you very much,
+
+<YOUR NAME>
+
+\caption{An email template used by students for obtaining tools.}\label{fig:email}
+
+\end{figure}
+
+%TODO how long did we give authors to provide the tools? 10 days? 7 days?
+
 \subsubsection{Getting the Tools Working}
 
-\subsubsection{Presenting the Tools}
+Once students had obtained the tools, they had two weeks to get 
+the tools working.
+Because some tools may only work in the very specific situations 
+described in their papers,
+teams were required to get the tools ``working'' as it was described
+in the paper.
+Teams were allowed to use any means necessary to get the tools working,
+including asking classmates for help, but were discouraged from
+harassing the tools' authors.
+At the end of the two weeks, if the tool was obtained and working,
+teams certified that the tool as working on the spreadsheet.
+
+If a team could not get a tool working for whatever reason, 
+several things happened.
+First, the team must certify the tool as ``unworkable.''
+Second, the team would be assigned a new tool by moving down the list
+of tools, and the process would start again.
+Third, the tool certified as ``unworkable'' would be made available 
+to the other teams to try to get working.
+
+The instructor created a disincentive for students to unnecessariyl 
+certify a tool as unworkable.
+If a team got an unworkable tool working, the team that certified it as  
+unworkable had their final course grade reduced by a minor 
+grade (for example, from an A to an A- or from a C to a C-).
+The team that gets the ``unworkable" tool working gets their final grade increased
+by a minor grade point.
+Furthermore, the only way to get an A+ course is to be on a team
+that gets an unworkable tool working.
 
 \subsubsection{Getting the Tools Working in a Virtual Machine}
 
-\subsubsection{Building the Virtual Machine Automatically}
+The first graded deliverable was a VirtualBox virtual machine
+image that contained an operating system, the tool, any
+and other software required by the tool (such as Eclipse),
+documentation, and license information.
+The goal of creating this image was to make it as
+easy as possible for future potential users to try
+the tool out; in essence, any ``fiddling'' required to get
+a tool working would not have to be done by the user.
+%VirtualBox is free and open source, and can be run on Windows,
+%Linux, OS X, or Solaris.
+
+The grading rubric for the image\footnote{\url{https://docs.google.com/spreadsheets/d/1zGwF_TbGCmrwH1vqY2_OHAQg7umd4zyAepHiirdb-yM/edit?usp=sharing}}
+additionally specified that minimal work is required
+on the part of the user to see the tool in action,
+that the technology stack does not contain any proprietary 
+software that is not not stricly necessary,
+and that the image is as small as possible.
+
+% there was a second VM submission
+
+\subsubsection{Building the Virtual Machine Image Automatically}
+
+After building a basic virtual machine image by hand,
+teams next built Vagrant scripts that built virtual machines
+automatically.
+The main goal of creating the script was to add 
+transparency to the process
+of installing the tool; if future users want to install the tool
+in their own development environment, the script provides a
+specification for doing so.
+
+The grading rubric for the virtual machine 
+script\footnote{\url{https://docs.google.com/spreadsheets/d/1qSt63AjwyiCRHCU-MMoTSDx_qPuWn7U4_QmjwC_Ghds/edit?usp=sharing}}
+was largely the same as for the hand-built image.
+For instance, some things that were easy to do in a hand-built 
+image turned out difficult in the script, such as changing 
+the username and password, so such requirements were 
+not included in the grading rubric for the script.
+The most substantial additional requirement for the script
+was that it uses ``standard and stable external resources 
+whenever possible (e.g., www.vagrantbox.es, rather than a 
+hand-built box)''.
+
+\subsubsection{Redistributing the Tools}
+
+Teams were required to establish GitHub repositories 
+for each tool that their team was assigned -- working or not.
+The main goal was to share the work the teams had 
+done with others.
+We created an organization to house each repository,
+which can be found 
+online.\footnote{\url{https://github.com/SoftwareEngineeringToolDemos/}}
+
+If the original tool contained a license to redistribute
+the source code, or the paper authors gave us explicit
+permission to do so, we redistributed that code 
+in our tool's repository.
+The same applied to the tools' binary.
+If the tool was working, 
+vagrant scripts were also included in the repository,
+regardless of whether we had permission to redistribute
+the tool; if we did not, users would have to contact the 
+original authors and drop in the tool (a binary, for instance)
+for the script to work.
+Even if the tool was not available to us, we created
+a mostly empty repository, for consistency.
+
+%TODO: for consistency: we, instructor, students, teams -> consistency
+%		pref for ``we'': the effort was quite collaborative, with me providing
+%		some technical help, students providing input into the process, TAs the same
+
+For tools for which we had source code,
+whenever possible teams included the history
+of that source code, for completeness.
+Ideally, tools that were already hosted
+on GitHub could be forked by the team,
+maintaining not just history but also an 
+explicit connection to the original repository.
+When original tool were hosted elsewhere, such
+as in subversion on Google Projects, 
+teams migrated source code history to GitHub.
+
+Teams added a readme file to each tool's repository
+that conveyed some basic information about
+the tool, including 
+links to the original paper and
+original project webpage, 
+as well as acknowledgements.
+The rubric outlined a number of small,
+specific requirements for the readme to
+ensure consistency.\footnote{\url{https://docs.google.com/spreadsheets/d/1ufh-XiNFY1jRvehDN_JulYQTRVHzuEDru6stPAyjxdc/edit?usp=sharing}}
+
+When teams had permission to redistribute
+the virtual machine image containing the tool,
+readmes also contained links to those images.
+The images were hosted on the instructor's 
+Google Drive account, which provides unlimited
+cloud storage.\footnote{\url{https://support.google.com/a/answer/2856827}}
+Such large capacity storage is necessary because each
+image occupies several gigabytes of space.
+
+\subsubsection{Presenting Tools}
+
+For the communication part of the class,
+teams were to present each working tool in front of the class
+for a 5 minute demonstration.
+The grading rubric specified, among other requirements,
+that the presentations explained what problem the 
+tool was built to solve, to give a simple enough
+example that the tool could be understood,
+and to be realistic enough to be 
+compelling.\footnote{\url{https://docs.google.com/spreadsheets/d/1Mb8yacxIP233kmjn3J_JtjOfJuIjmSHnMKttr1CVxCM/edit?usp=sharing}}
+Teams also prepared a video demo of each working tool,
+posted on YouTube and linked to from the virtual machine
+image and the GitHub readme.
+
+\subsubsection{Evaluations}
+
+Teams' deliverables were evaluated by their 
+peers and by two teachers' assistants (TAs).
+While both peers and TAs evaluated the deliverables
+for quality and consistency, only the TA evaluations
+counted towards teams' grades.
+
+Teams completed peer evaluations of other teams' hand-built 
+virtual machines and GitHub repositories.
+This entailed reading the original paper to understand
+how the tool was supposed to work, 
+using the tool in the virtual machine,
+and comparing deliverables to the grading rubrics.
+When students found defects, they filed issues 
+in the repositories issue tracker and provided
+fixes for simple defects using pull requests.
+
+%TODO should really link to these, too. can we make Moodle public?
+
+Hand-build virtual machine images were evaluated in 
+two rounds by the TAs, where students enahanced their
+images between rounds and the rubrics were updated
+for the second round based on what the TAs 
+observed in the first.
+Likewise, vagrant scripts were evaluated in two rounds
+by the TAs.
+Finally, TAs evaluated all artifacts (images, vagrant 
+scripts, and repositories) together in a final project 
+evaluation.
+
+\subsubsection{Data Collection and Contributions}
+
+As part of the final project submission, 
+the instructor collected data about 
+each tool in the form of a survey.
+This tool survey asked, for instance, how long
+the team estimated they spent on getting 
+the tool working.
+Each student also submitted a second survey that
+asked students what they thought about the project,
+and whether they wanted to participate as an
+author of this paper.
+%TODO how many opted out?
+Data was also collected from standardized and 
+anonymous course evaluation forms, forms
+that are used for all courses 
+across the university.
+
+This paper was written primarily by the first author,
+the instructor of the course, after the course 
+had ended.
+The paper's source and history can also be found 
+on GitHub.\footnote{\url{https://github.com/SoftwareEngineeringToolDemos/paper}}
+The technical work was con
+
+\section{Example Tool}
+
+Sketch example tool here, with all the pieces.
+It would be nice if it exemplified some issues 
+brought up later, such as technology stack licensing.
 
 \section{Procedure}
 

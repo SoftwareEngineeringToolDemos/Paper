@@ -1,11 +1,13 @@
 \documentclass{sig-alternate-05-2015}
-
+\usepackage{xspace}
 
 \begin{document}
 
 \setcopyright{acmcopyright}
 
 \conferenceinfo{FSE '16}{November 13--19, 2016, Seattle, WA, USA}
+
+
 
 
 \title{A Doomsday Vault of Software Engineering Tools}
@@ -696,11 +698,56 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 
 \section{Results}
 
+
+\newcommand{\durationTotal}{7100\xspace}
+\newcommand{\durationCorresponding}{2\xspace}
+\newcommand{\durationWorking}{10\xspace}
+\newcommand{\durationVM}{10\xspace}
+\newcommand{\durationVagrant}{15\xspace}
+\newcommand{\durationWorkingOnWorkable}{9.5\xspace}
+\newcommand{\durationWorkingOnUnWorkable}{6\xspace}
+
 \subsection{RQ1 and RQ2}
 
 \subsubsection{Effort}
 
-Average person-hours per tool, distribution (min, max, box plot)
+Through a survey near the end of the course, 
+teams estimated how long they spent
+corresponding with paper authors,
+getting a tool to work,
+getting it to work in a virtual machine,
+and getting it to work with vagrant.
+The median time teams spent corresponding with
+authors was \durationCorresponding hours.
+For tools where teams obtained the tool,
+they spent a median of \durationWorking hours
+trying to get it to work
+(\durationWorkingOnWorkable hours for tools that were certified as working,
+\durationWorkingOnUnWorkable hours for tools certified as unworkable).
+For tools where the teams got a tool working,
+they spent a median of \durationVM getting it working 
+in a virtual machine image and
+\durationVagrant hours generating a working tool
+image with Vagrant.
+In total, teams spent \durationTotal hours working
+on all tools combined.
+
+%TODO box/vio plot?
+
+The survey also asked participants if they spent
+additional time on their projects.
+In addition to project requirements like establishing
+the GitHub repository, teams 
+reported spending additional time 
+learning about their tools,
+searching for the tool on the web,
+waiting for author replies,
+obtaining the license for a tool,
+figuring out what dependencies a tool had,
+obtaining a Solaris base box for Vagrant,
+and
+getting a tool to work with a variety of examples.
+
 
 Time invested in evaluating non-working tools.
 

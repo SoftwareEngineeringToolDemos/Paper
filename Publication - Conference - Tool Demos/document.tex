@@ -714,6 +714,7 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \newcommand{\emailsFriendly}{85\%\xspace}
 \newcommand{\emailsIntimidating}{4\%\xspace}
 \newcommand{\emailsAnnoyed}{10\%\xspace}
+\newcommand{\emailsPercentSent}{92\%\xspace}
 
 \subsection{RQ1 and RQ2}
 
@@ -762,21 +763,40 @@ getting a tool to work with a variety of examples.
   \caption{Summary of emails sent and received.}\label{fig:emailSnR}
 \end{figure}
 
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{requestPlot.pdf}
+  \caption{Authors compliance with teams' tool requests.}\label{fig:requests}
+\end{figure}
+
 Because a significant portion of participants' time was
 spent corresponding with the authors,
 the survey also asked teams about their email interactions.
+Overall, teams sent emails for \emailsPercentSent of tools.
 Teams sent a median of \emailsSent and recieved 
 a median of \emailsRecieved emails from each author.
-
 Figure~\ref{fig:emailSnR} summarizes the number of emails
 we sent and received, where the size of each dot
 represents the number of tools that had
 that many emails sent and received.
-We see that, overall, authors were generally responsive,
-and that in most cases, few emails were required.
+We see that, overall, few emails were required
+and authors appeared generally responsive.
+
+While authors were generally responsive to emails,
+they were not necessarily responsive or compliant 
+with the requests contained in those emails.
+Figure~\ref{fig:requests} lists what teams requested from authors
+(horizontally) and whether authors complied (colors).
+Overall, each kind of request was met with substantial non-response and
+non-compliance.
+Beyond these requests, teams reported needing to ask for 
+license keys and
+an old version of a dependency.
 
 %TODO should check to see which projects have licenses, 
 %and perhaps students didn't need to send emails
+
+%TODO: binary/executable for consistency throughout paper
 
 We also estimated how much
 time authors spent reading and responding to our emails.
@@ -794,6 +814,8 @@ Teams felt that \emailsHelpful of responses were helpful and
 \emailsFriendly were friendly.
 Only \emailsIntimidating felt the responses were intimidating
 and \emailsAnnoyed seemed annoyed.
+
+
 
 \subsubsection{Challenge: Tool Cannot Be Obtained}
 

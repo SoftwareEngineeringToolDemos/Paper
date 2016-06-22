@@ -699,13 +699,21 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \section{Results}
 
 
-\newcommand{\durationTotal}{7100\xspace}
+\newcommand{\durationTotal}{6976\xspace}
 \newcommand{\durationCorresponding}{2\xspace}
 \newcommand{\durationWorking}{10\xspace}
 \newcommand{\durationVM}{10\xspace}
 \newcommand{\durationVagrant}{15\xspace}
 \newcommand{\durationWorkingOnWorkable}{9.5\xspace}
 \newcommand{\durationWorkingOnUnWorkable}{6\xspace}
+\newcommand{\emailsSent}{3\xspace}
+\newcommand{\emailsRecieved}{2\xspace}
+\newcommand{\durationAuthorResponse}{15\xspace}
+\newcommand{\durationAuthorResponseCountHigh}{20\xspace}
+\newcommand{\emailsHelpful}{82\%\xspace}
+\newcommand{\emailsFriendly}{85\%\xspace}
+\newcommand{\emailsIntimidating}{4\%\xspace}
+\newcommand{\emailsAnnoyed}{10\%\xspace}
 
 \subsection{RQ1 and RQ2}
 
@@ -748,8 +756,44 @@ obtaining a Solaris base box for Vagrant,
 and
 getting a tool to work with a variety of examples.
 
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{emailPlot.pdf}
+  \caption{Summary of emails sent and received.}\label{fig:emailSnR}
+\end{figure}
 
-Time invested in evaluating non-working tools.
+Because a significant portion of participants' time was
+spent corresponding with the authors,
+the survey also asked teams about their email interactions.
+Teams sent a median of \emailsSent and recieved 
+a median of \emailsRecieved emails from each author.
+
+Figure~\ref{fig:emailSnR} summarizes the number of emails
+we sent and received, where the size of each dot
+represents the number of tools that had
+that many emails sent and received.
+We see that, overall, authors were generally responsive,
+and that in most cases, few emails were required.
+
+%TODO should check to see which projects have licenses, 
+%and perhaps students didn't need to send emails
+
+We also estimated how much
+time authors spent reading and responding to our emails.
+To minimize authors' effort, we did not ask authors directly.
+Instead, we asked teams to estimate how much time authors spent 
+reading and responding to our emails, including time for 
+any background work such as restarting servers.
+Teams estimated that a median of \durationAuthorResponse minutes 
+was spent, with \durationAuthorResponseCountHigh tool authors having
+to spend more than an hour.
+
+Teams also reported about the tone of the response they received from 
+authors.
+Teams felt that \emailsHelpful of responses were helpful and
+\emailsFriendly were friendly.
+Only \emailsIntimidating felt the responses were intimidating
+and \emailsAnnoyed seemed annoyed.
 
 \subsubsection{Challenge: Tool Cannot Be Obtained}
 

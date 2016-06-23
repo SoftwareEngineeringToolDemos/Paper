@@ -734,6 +734,12 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \newcommand{\onlineNotAvail}{39\%\xspace}
 \newcommand{\onlineCodeplex}{2\%\xspace}
 \newcommand{\onlineBitbucket}{3\%\xspace}
+\newcommand{\working}{63\%\xspace}
+\newcommand{\unworkPay}{2\xspace}
+\newcommand{\unworkInternal}{9\xspace}
+\newcommand{\unworkNoResponseToAsk}{13\xspace}
+\newcommand{\unworkTooLate}{3\xspace}
+\newcommand{\unworkCouldntWorkIt}{19\xspace}
 
 \subsection{RQ1 and RQ2}
 
@@ -886,6 +892,50 @@ Many tools were available on open code repositories:
 \onlineBitbucket on Bitbucket,
 and \onlineCodeplex on CodePlex.
 
+
+In total, teams marked \working tools as working.
+The remaing tools were marked ``unworkable'' for a 
+several of reasons.
+The most common reason teams marked tools as unworkable
+was that the teams could not get the tools 
+working (\unworkCouldntWorkIt tools),
+typically due to build errors or mismatches between
+the way the downloaded tool worked and the way 
+it was described in the paper.
+A common problem for these tools was dependencies on
+software whose versions were unspecified 
+(and at least once forgotten by the author), and teamsKailua Kona, HI
+failed to get the tools working with the versions they
+tried.
+Teams also described having issues with 
+tool configuration,
+missing functionality, and
+missing or corrupted program files or data.
+
+Teams were unable to mark tools as working 
+for a variety of other reasons, as well.
+For \unworkNoResponseToAsk tools, teams reported asking for a tool,
+but recieving no response from the authors.
+For \unworkTooLate tools, teams eventually got a response with the tool, 
+but it was  too late.
+%TODO how late is too late?
+\unworkInternal tools were not available outside the organization
+they were developed in.
+\unworkPay tools had software dependencies on for-pay tools; 
+the may have worked if we had been willing to pay 
+for the dependencies.
+
+Several tools were not available to us, 
+and the authors were unwilling or unable to do so.
+For two tools, the author was simply unavailable,
+without further explanation.
+For one tool, the author was uncomfortable making 
+the tool available.
+For another, the author said the tool was only a prototype.
+For another, the author stated that the tool had too
+many dependencies with other tools.
+For another, the author stated that the tool does not
+exist anymore.
 
 \subsubsection{Challenge: Tool Cannot Be Obtained}
 

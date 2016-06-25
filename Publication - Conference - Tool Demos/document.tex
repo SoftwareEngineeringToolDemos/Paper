@@ -752,6 +752,9 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \newcommand{\licenseLGPL21}{2\xspace}
 \newcommand{\licenseMPL}{2\xspace}
 \newcommand{\licenseEPL}{14\xspace}
+\newcommand{\depWindows}{22\xspace}
+\newcommand{\depVS}{6\xspace}
+\newcommand{\permissionToRedistribute}{50\xspace}
 
 
 \subsection{RQ1 and RQ2}
@@ -970,6 +973,30 @@ tools specifically asked us \emph{not} to redistribute the
 tool; although we honored the authors' requests,
 the requests nonetheless directly conflicts
 with those tools' licenses.  
+
+Our ability to redistribute virtual machines of the tools were
+further restricted by the tools' dependencies.
+The most common dependencies were on the Windows 
+operating system (\depWindows tools).
+\depVS tools were dependent on Visual Studio.
+A few other tools depended on other commercial 
+operating systems and tools.
+ 
+After excluding tools 
+that we did not get working,
+that we did not have permission to redistribute, and 
+that relied on software we did not have permission to redistribute,
+\permissionToRedistribute tools remained.
+We have made these tools publicly available in virtual machines 
+images online.\footnote{\url{http://go.ncsu.edu/SE-tool-VMs}}
+Our GitHub repositories link to these virtual machine images,
+and contain relevant tool artifacts such as source code
+and binaries.
+A total of 62 repositories 
+% based on https://github.com/search?q=org%3ASoftwareEngineeringToolDemos+Vagrant.configure&ref=searchresults&type=Code&utf8=%E2%9C%93
+contain vagrant scripts to build 
+virtual machines that contain the tools. 
+
 
 \subsubsection{Challenge: Tool Cannot Be Obtained}
 

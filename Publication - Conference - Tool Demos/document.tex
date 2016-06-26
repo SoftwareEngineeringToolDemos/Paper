@@ -758,7 +758,9 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \newcommand{\depWindows}{22\xspace}
 \newcommand{\depVS}{6\xspace}
 \newcommand{\permissionToRedistribute}{50\xspace}
-
+\newcommand{\projectLikeThis}{45\%\xspace}
+\newcommand{\projectLikeOther}{26\%\xspace}
+\newcommand{\projectDontCare}{30\%\xspace}
 
 \subsection{RQ1 and RQ2}
 
@@ -1045,6 +1047,130 @@ Some tools versioned differently.
 
 \subsection{RQ3 and RQ4}
 
+
+\subsection{Course Results}
+
+Viewed in the context of a university course,
+students viewed the course project negatively,
+based on two main metrics.
+First, many students dropped the course; 
+at its peak, the course was full and had a full
+waiting list with a combined 105 students.
+By the end of the course, only 58 students remained.
+%based on mypack, minus one student marked as `Crs Wdraw'
+Second, the university-administered evaluations for
+the course and course project were low.
+All quantitative metrics for the course were below
+the Computer Science department average, and were
+lower than for courses the instructor has previously
+taught.
+Specifically, the most common response to the question
+of whether the course project was a valuable aid to learning
+was ``strongly disagree''.
+What accounts for this negative reaction?
+
+With respect to students dropping the course, students were asked
+in the non-anonymous survey at the end of the course whether they knew
+students who dropped, and if so, whether they knew why.
+While students cited some external reasons, the 
+primary one appeared to be that the course was more work
+than they had expected.
+Although other changes had been made to the course, 
+most notably ``flipping'' the lectures~\cite{flipped},
+the main one was the project, so the project load
+was likely responsible for the drops.
+
+With respect to low student evaluations of the project,
+the problem appears to be with several aspects of project
+design, rather than a fundamental issue with the project itself.
+In the non-anonymous survey, students were given a brief description
+of the old project, and were asked which version of the course project
+they would prefer.
+\projectLikeThis of students preferred the present course project,
+\projectLikeOther would prefer the past course project,
+and the remaining students had no preference.
+Nonetheless, several areas of the course project were challenging,
+as described below.
+
+\textbf{Lack of Teamwork.}
+  	Teamwork was critical to a successful project, because a single student
+  	is unlikely to have all the technical skills necessary to get an
+  	arbitrary tool working.
+  	While the instructor explaind this to students early on, 
+  	he did not provide an environment that was conducive to teamwork.
+  	First, no specific collaboration technologies or practices were encouraged,
+  	such as Slack, scrum, or cloud-based virtual machines.
+  	Second, the easiest way to break down work was to assign one person in a team
+  	to work on one tool; because each tool generally worked independently
+  	from other tools, it appeared that teammates worked in a fairly siloed way.  	
+  	Third, teams lacked cohesiveness because teammates were assigned randomly.
+  	Because many students dropped the course, team cohesiveness may have 
+	been reduced further.
+	Teamwork problems can likely be improved substantially in the future by 
+	educating students on and providing collaboration technologies, and allowing
+	teams to choose their own members. 
+
+\textbf{Uneven Tool Difficulties.}
+  	Some tools are simple, others are complex; likewise,
+  	some tools were easy to get working, while others were extremely difficult.
+  	The instructor originally aimed to improve fairness by assigning multiple tools
+  	to teams, so that average tool difficulty across teams should be roughly equivalent.
+  	However, the siloing within teams still meant that some students were doing
+  	significantly more work than other students.  
+  	Breaking down the silos may improve this inequity problem.
+  	This may also be an opportunity to create an assignment that applies the course
+  	material on effort and risk estimation.   	
+
+\textbf{Vagrant Scripting.}
+  	Vagrant scripting turned out more challenging than anticipated.
+  	One reason was that install software on Windows machines is difficult
+  	due to operating system security checks.
+  	Another difficulty was some scripts needed large files, which GitHub could not
+  	store, so these scripts needed to load data from other locations 
+  	(such as Google Drive), decreasing the likelihood that these scripts will
+  	continue to function correctly over time. 
+  	Building vagrant vagrant scripts should be easier in the future, now that
+  	we have a repository of examples that include, for instance, how to
+  	use a Windows package manager and how to 
+  	install Eclipse and load Eclipse workspaces. 
+  	One way to approach quality problems is by treating them as testing and 
+  	continuous integration problems; Travis CI,
+  	for instance, may be appropriate for building VMs automatically,
+  	assessing the quality of those VMs with test automation,
+  	and making public the VMs and Travis scripts.
+
+\textbf{Unusual Grading.} 
+	The instructor recognized that the grading strategy of making substantial
+	grade adjustments when teams got unworkable tools working would be 
+	controversial among students.
+	Four out of 44 students complained about this in the anonymous course
+	evaluation.
+	Only one team ended up getting an unworkable tool working, and this team expressed
+	some hesitation in doing so because it meant a negative repercussions for their
+	classmates.
+	Nonetheless, in the opinion of the instructor, the grading strategy was effective
+	in making sure teams tried sufficiently hard to get their tools working. 
+ 	Future iterations of the project may explore alternate grading options.
+
+\textbf{In-Class Presentations.}
+  	Although in-class presentations were only 5 minutes per tool, as a whole they
+  	took up an inordinate amount of class time.
+  	For future iterations of the projects, students will instead make videos posted
+  	online about their tools, and perhaps only one tool per team will be presented
+  	in class.
+ 
+Finally, despite the challenges with the course, the instructor's opinion is that 
+the course was highly worthwhile.
+He knows of no other software enginering courses that integrate research into 
+teaching to the degree that this one does, while at the same time capitalizing
+on the existing talents of computer science graduate students for the greater 
+good.
+While educational outcomes can be strengthened by deeper integration of the lecture
+material into project work, as a whole, the instructor believes that 
+the project was an improvement over the prior project.
+On the other hand, the project was so radically different from prior 
+projects -- perhaps to a mutinous degree -- that trying it is a risky 
+proposition for untenured instructors.
 
 \subsubsection{Challenge: Tool Licensing}
 

@@ -764,9 +764,7 @@ Tools where tool could convievably be put into a virtual machine. How many didn'
 \newcommand{\projectLikeOther}{26\%\xspace}
 \newcommand{\projectDontCare}{30\%\xspace}
 
-\subsection{RQ1 and RQ2}
-
-\subsubsection{Effort}
+\subsection{RQ1: Effort}
 
 Through a survey near the end of the course, 
 teams estimated how long they spent
@@ -803,18 +801,10 @@ obtaining a Solaris base box for Vagrant,
 and
 getting a tool to work with a variety of examples.
 
-\subsubsection{Interactions with Authors}
-
 \begin{figure}[!ht]
   \centering
     \includegraphics[width=0.5\textwidth]{emailPlot.pdf}
   \caption{Summary of emails sent and received.}\label{fig:emailSnR}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering
-    \includegraphics[width=0.5\textwidth]{requestPlot.pdf}
-  \caption{Authors compliance with teams' tool requests.}\label{fig:requests}
 \end{figure}
 
 Because a significant portion of participants' time was
@@ -830,24 +820,11 @@ that many emails sent and received.
 We see that, overall, few emails were required
 and authors appeared generally responsive.
 
-While authors were generally responsive to emails,
-they were not necessarily responsive or compliant 
-with the requests contained in those emails.
-Figure~\ref{fig:requests} lists what teams requested from authors
-(horizontally) and whether authors complied (colors).
-Overall, each kind of request was met with substantial non-response and
-non-compliance.
-Beyond these requests, teams reported needing to ask for 
-license keys and
-an old version of a dependency.
+%TODO authors -> researchers
 
-%TODO should check to see which projects have licenses, 
-%and perhaps students didn't need to send emails
-
-%TODO: binary/executable for consistency throughout paper
-
-We also estimated how much
-time authors spent reading and responding to our emails.
+The effort spent to get a tool working was not only
+borne by us, but also the researchers who 
+read and responed to our emails.
 To minimize authors' effort, we did not ask authors directly.
 Instead, we asked teams to estimate how much time authors spent 
 reading and responding to our emails, including time for 
@@ -856,35 +833,9 @@ Teams estimated that a median of \durationAuthorResponse minutes
 was spent, with \durationAuthorResponseCountHigh tool authors having
 to spend more than an hour.
 
-Teams also reported about the tone of the response they received from 
-authors.
-Teams felt that \emailsHelpful of responses were helpful and
-\emailsFriendly were friendly.
-Only \emailsIntimidating felt the responses were intimidating
-and \emailsAnnoyed seemed annoyed.
+\subsection{RQ2: Barriers}
 
-In freeform text on the survey, teams reported whether 
-there was anything missing from the tool when they first
-got it.
-Teams reported missing configuration files
-settings that needed to be edited before use, 
-information about IDE compatibility,
-sample input,
-and steps required for installation.                                                                                                               
-
-\subsubsection{Missing Information}
-
-In contacting the authors, authors sometimes made
-changes to their tools or supporting infrastructure.
-Teams reported that authors fixed bugs in \contactFixBug tools,
-started hosting \contactHosted tools on a public repository,
-fixed web links to \contactFixLink tool binaries,
-added open source licenses to \contactOSSed tools,
-and fixed deployment issues for \contactFixDepl tools.
-Teams also reported teams fixing problems with dependencies,
-fixing other kinds of links, 
-modifying an existing readme,
-and adding a vagrant script to an existing repository.
+\subsubsection{Obtaining the Tools from the Paper}
 
 Teams found that about \papersWithLinks papers
 contained links to online information about their tools.
@@ -901,6 +852,8 @@ links in the papers themselves, but could be
 from searching the web.
 When those failed, another \obtainEmail were 
 obtained after emailing the authors.
+In doing so, \contactFixLink links to tools 
+were fixed by the tools' authors.
 \obtainNot of tools could not be obtained
 by teams at all.
 
@@ -916,30 +869,32 @@ Many tools were available on open code repositories:
 \onlineSourceforge on Souceforge,
 \onlineBitbucket on Bitbucket,
 and \onlineCodeplex on CodePlex.
+Of these, \contactHosted tools began hosting 
+on a public repository after
+we contacted the authors.
 
-\subsubsection{Getting Tools Working}
+Even when tools were ostensibly available,
+sometimes critical pieces were missing,
+as reported by teams in freeform text on the survey.
+Teams reported missing configuration files
+settings that needed to be edited before use, 
+information about IDE compatibility,
+sample input,
+and steps required for installation. 
 
-In total, teams marked \working tools as working.
-The remaing tools were marked ``unworkable'' for a 
-several of reasons.
-The most common reason teams marked tools as unworkable
-was that the teams could not get the tools 
-working (\unworkCouldntWorkIt tools),
-typically due to build errors or mismatches between
-the way the downloaded tool worked and the way 
-it was described in the paper.
-A common problem for these tools was dependencies on
-software whose versions were unspecified 
-(and at least once forgotten by the author), and teams
-failed to get the tools working with the versions they
-tried.
-Teams also described having issues with 
-tool configuration,
-missing functionality, and
-missing or corrupted program files or data.
+\subsubsection{Author Compliance}
 
-Teams were unable to mark tools as working 
-for a variety of other reasons, as well.
+While authors were generally responsive to emails,
+they were not necessarily responsive or compliant 
+with the requests contained in those emails.
+Figure~\ref{fig:requests} lists what teams requested from authors
+(horizontally) and whether authors complied (colors).
+Overall, each kind of request was met with substantial non-response and
+non-compliance.
+Beyond these requests, teams reported needing to ask for 
+license keys and
+an old version of a dependency.
+
 For \unworkNoResponseToAsk tools, teams reported asking for a tool,
 but recieving no response from the authors.
 For \unworkTooLate tools, teams eventually got a response with the tool, 
@@ -963,19 +918,52 @@ many dependencies with other tools.
 For another, the author stated that the tool does not
 exist anymore.
 
-Several of the tools we analyzed were a service or had a
-service component; for instance, several tools
-ran as web applications on the creator's website.
-If the service is running, services provide a convenient way
-for users to try a tool.
-In total, for \serviceRunning tools, teams 
-reported that the service was running when the teams tried
-to access it.
-For \serviceRunningLater tools, teams reported that the service
-was not running, but the authors got the service running
-after the teams emailed them.
-For \serviceRunningNever tools, teams reported that the service
-never worked when they tried it.  
+\begin{figure}[!t]
+  \centering
+    \includegraphics[width=0.5\textwidth]{requestPlot.pdf}
+  \caption{Authors compliance with teams' tool requests.}\label{fig:requests}
+\end{figure}
+
+%TODO should check to see which projects have licenses, 
+%and perhaps students didn't need to send emails
+
+%TODO: binary/executable for consistency throughout paper
+
+Teams also reported about the tone of the response they received from 
+authors.
+Teams felt that \emailsHelpful of responses were helpful and
+\emailsFriendly were friendly.
+Only \emailsIntimidating felt the responses were intimidating
+and \emailsAnnoyed seemed annoyed.                                                                                                              
+
+
+\subsubsection{Technical Challenges}
+
+In total, teams marked \working tools as working.
+The remaing tools were marked ``unworkable'' for a 
+several of reasons.
+The most common reason teams marked tools as unworkable
+was that the teams could not get the tools 
+working (\unworkCouldntWorkIt tools),
+typically due to build errors or mismatches between
+the way the downloaded tool worked and the way 
+it was described in the paper.
+A common problem for these tools was dependencies on
+software whose versions were unspecified 
+(and at least once forgotten by the author), and teams
+failed to get the tools working with the versions they
+tried.
+Teams also described having issues with 
+tool configuration,
+missing functionality, and
+missing or corrupted program files or data.
+After contacting the authors, teams reported that authors 
+fixed bugs in \contactFixBug tools,
+fixed deployment issues for \contactFixDepl tools,
+and fixed some problems with dependencies.
+
+\subsection{RQ3: Barriers to Virtualizing}
+%TODO is this a correct use of term ``virutalizing''?
 
 \subsubsection{Licensing and Permissions}
 
@@ -990,6 +978,8 @@ Common licenses were:
 \licenseGPL3 had a GPL 3.0 license,
 \licenseLGPL21 has a LGPL 2.0 license,
 \licenseMPL has a Microsoft Public License.
+Authors added open source licenses to \contactOSSed tools
+after we contacted them by email.	
 Although they did not have an explicit license,
 authors of \redistPermissionEmail tools granted us
 permission to redistribute via email.
@@ -1052,10 +1042,7 @@ One tool required to different VMs because two features needed different prereqs
 
 Some tools versioned differently.
 
-\subsection{RQ3 and RQ4}
-
-
-\subsection{Course Results}
+\subsection{RQ4: Classroom}
 
 Viewed in the context of a university course,
 students viewed the course project negatively,
@@ -1199,5 +1186,23 @@ Some other things.
 
 \bibliographystyle{abbrv}
 \bibliography{references}
+
+\section{Appendix}
+
+Here are some random results that didn't fit elsewhere.
+
+Several of the tools we analyzed were a service or had a
+service component; for instance, several tools
+ran as web applications on the creator's website.
+If the service is running, services provide a convenient way
+for users to try a tool.
+In total, for \serviceRunning tools, teams 
+reported that the service was running when the teams tried
+to access it.
+For \serviceRunningLater tools, teams reported that the service
+was not running, but the authors got the service running
+after the teams emailed them.
+For \serviceRunningNever tools, teams reported that the service
+never worked when they tried it.  
 
 \end{document}

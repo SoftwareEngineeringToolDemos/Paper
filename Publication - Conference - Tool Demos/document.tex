@@ -688,15 +688,53 @@ The technical work was conducted primarily by the students.
 
 \section{Example Tool}
 
-Sketch example tool here, with all the pieces.
-It would be nice if it exemplified some issues 
-brought up later, such as technology stack licensing.
+In this section, we exhibit one workng tool.
+Figure~\ref{fig:jstar} shows our GitHub page for
+the tool jStar-eclipse~\cite{jstar}.
+This page shows that we forked
+the repository from an existing GitHub repository.
+The README.md has the name of the tool, 
+the contents of the original readme 
+(the first two lines under the title),
+links to some original resources,
+and acknowledgements.
+It also states that the repsoitory contains
+the source code, a link to the original tool,
+binaries, and an external link to our virtual
+machine. 
 
-\section{Procedure}
 
-No cost, but demos ok. (How many did this happen with?)
+\begin{figure}[t]
+  \centering
+    \includegraphics[width=0.5\textwidth]{jstar.png}
+  \caption{Our forked repository for a jStar-eclipse.}\label{fig:jstar}
+\end{figure}
 
-Tools where tool could convievably be put into a virtual machine. How many didn't fit?
+Figure~\ref{fig:vagrant} shows an the Vagrant script and 
+part of an external script that builds the virtual machine.
+The vagrant script installs a plugin, 
+uses a base virtual machine image from the boxcutter 
+community,\footnote{\url{https://atlas.hashicorp.com/boxcutter}}
+and calls four shell scripts interspersed with operating system 
+restarts.
+The external shell script shown removes some unneeded software,
+and installs some prerequisites to the tool, including Eclipse and
+an ocaml compiler. 
+
+\begin{figure}[t]
+  \centering
+    \includegraphics[width=0.5\textwidth]{vagrant.png}
+  \caption{Scripts for generating virtual machine image containing jStar-eclipse.}\label{fig:vagrant}
+\end{figure}
+
+In the remainder of the paper, we do not call out 
+any particular tool, but instead only speak of aggregates.
+The reason is that we do not wish to embarass any of the authors.
+Accordingly, we have taken steps to make sure that data we have made 
+public with this paper does not embarass authors either.
+For instance, while our GitHub repositories say when tools are 
+not available, we do not publicly indicate why they are
+not available.
 
 \section{Results}
 
@@ -965,10 +1003,14 @@ and fixed some problems with dependencies.
 \subsection{RQ3: Barriers to Virtualizing}
 %TODO is this a correct use of term ``virutalizing''?
 
-\subsubsection{Licensing and Permissions}
+Once the tools were available and working, 
+the barriers to getting them working in the
+virtual machines were largely about licensing issues
+surrounding each tool and the software it depends on.
 
 \redistPermissionArtifact tools were open-sourced, 
-under a variety of licenses.
+under a variety of licenses, making them appropriate
+for redistirubtion in virtual machines.,
 Common licenses were:
 \licenseEPL had an Eclipse Public License license,
 \licenseMIT had an MIT license,
@@ -1012,35 +1054,9 @@ A total of 62 repositories
 % based on https://github.com/search?q=org%3ASoftwareEngineeringToolDemos+Vagrant.configure&ref=searchresults&type=Code&utf8=%E2%9C%93
 contain vagrant scripts to build 
 virtual machines that contain the tools. 
-
-
-\subsubsection{Challenge: Tool Cannot Be Obtained}
-
-What percent of tool links were dead?
-What percent of tools said they were available in the paper, but the tool could not be obtained?
-What percent of tools were being planned to be commercialized? What were actually commercial?
-What percent of tools could we use if we had paid for them?
-
-\subsubsection{Challenge: Disappearing Tools}
-
-One author said tool just doesn't exist anymore.
-
-Another author had to dig tool out of long term archive.
-
-Several authors (what percent?) has tools hosted on Google code, even though it was dying.
-Did we save 'em?
-
-\subsubsection{Challenge: Author non-responsive}
-
-%TODO: look at righthand column for tool; indications of why tools not working?
-
-\subsubsection{Challenge: Technical Difficulties}
-
-\subsubsection{Challenge: Inconsistencies}
-
-One tool required to different VMs because two features needed different prereqs.
-
-Some tools versioned differently.
+%TODO One author said tool just doesn't exist anymore.
+%TODO Another author had to dig tool out of long term archive.
+%TODO Several authors (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
 
 \subsection{RQ4: Classroom}
 
@@ -1166,15 +1182,9 @@ On the other hand, the project was so radically different from prior
 projects -- perhaps to a mutinous degree -- that trying it is a risky 
 proposition for untenured instructors.
 
-\subsubsection{Challenge: Tool Licensing}
+\section{Discussion}
 
-University grey area.
-
-\subsubsection{Challenge: Technology Stack Licensing}
-
-\subsubsection{Challenge: Author Doesn't Want Redistribution}
-
-Even when tool is available
+What are the implications for authors? For conferences?
 
 \section{Conclusions}
 

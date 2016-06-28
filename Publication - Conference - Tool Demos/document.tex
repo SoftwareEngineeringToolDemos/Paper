@@ -3,20 +3,79 @@
 
 \begin{document}
 
+\newcommand{\durationTotal}{6706\xspace}
+\newcommand{\durationCorresponding}{2\xspace}
+\newcommand{\durationWorking}{10\xspace}
+\newcommand{\durationVM}{10\xspace}
+\newcommand{\durationVagrant}{15\xspace}
+\newcommand{\durationWorkingOnWorkable}{10\xspace}
+\newcommand{\durationWorkingOnUnWorkable}{10\xspace}
+\newcommand{\emailsSent}{3\xspace}
+\newcommand{\emailsRecieved}{2\xspace}
+\newcommand{\durationAuthorResponse}{15\xspace}
+\newcommand{\durationAuthorResponseCountHigh}{20\xspace}
+\newcommand{\emailsHelpful}{82\%\xspace}
+\newcommand{\emailsFriendly}{85\%\xspace}
+\newcommand{\emailsIntimidating}{4\%\xspace}
+\newcommand{\emailsAnnoyed}{10\%\xspace}
+\newcommand{\emailsPercentSent}{92\%\xspace}
+\newcommand{\contactOSSed}{2\xspace}
+\newcommand{\contactFixLink}{3\xspace}
+\newcommand{\contactHosted}{4\xspace}
+\newcommand{\contactFixBug}{8\xspace}
+\newcommand{\contactFixDepl}{2\xspace}
+\newcommand{\papersWithLinks}{62\%\xspace}
+\newcommand{\papersWithLinksDead}{7\%\xspace}
+\newcommand{\papersWithLinksRevived}{44\%\xspace}
+\newcommand{\obtainPaper}{42\%\xspace}
+\newcommand{\obtainGoogle}{19\%\xspace}
+\newcommand{\obtainEmail}{20\%\xspace}
+\newcommand{\obtainNot}{20\%\xspace}
+\newcommand{\onlineGitHub}{25\%\xspace}
+\newcommand{\onlineSourceforge}{3\%\xspace}
+\newcommand{\onlineGcode}{4\%\xspace}
+\newcommand{\onlinePersonalSite}{28\%\xspace}
+\newcommand{\onlineNotAvail}{39\%\xspace}
+\newcommand{\onlineCodeplex}{2\%\xspace}
+\newcommand{\onlineBitbucket}{3\%\xspace}
+\newcommand{\working}{63\%\xspace}
+\newcommand{\unworkPay}{2\xspace}
+\newcommand{\unworkInternal}{9\xspace}
+\newcommand{\unworkNoResponseToAsk}{13\xspace}
+\newcommand{\unworkTooLate}{3\xspace}
+\newcommand{\unworkCouldntWorkIt}{19\xspace}
+\newcommand{\serviceRunning}{8\xspace}
+\newcommand{\serviceRunningLater}{2\xspace}
+\newcommand{\serviceRunningNever}{4\xspace}
+\newcommand{\redistPermissionArtifact}{43\xspace}
+\newcommand{\redistPermissionEmail}{31\xspace}
+\newcommand{\licenseMIT}{7\xspace}
+\newcommand{\licenseGPL}{5\xspace}
+\newcommand{\licenseApache}{7\xspace}
+\newcommand{\licenseGPLThree}{4\xspace}
+\newcommand{\licenseBSD}{6\xspace}
+\newcommand{\licenseLGPL}{2\xspace}
+\newcommand{\licenseMPL}{2\xspace}
+\newcommand{\licenseEPL}{14\xspace}
+\newcommand{\depWindows}{22\xspace}
+\newcommand{\depVS}{6\xspace}
+\newcommand{\permissionToRedistribute}{49\xspace}
+
+\newcommand{\projectLikeThis}{45\%\xspace}
+\newcommand{\projectLikeOther}{26\%\xspace}
+\newcommand{\projectDontCare}{30\%\xspace}
+
 \setcopyright{acmcopyright}
 
 \conferenceinfo{FSE '16}{November 13--19, 2016, Seattle, WA, USA}
 
 
-
-
-\title{A Doomsday Vault of Software Engineering Tools}
-\subtitle{Archiving Software Engineering Tools from ICSE and FSE 2011 through 2014}
+\title{Reviving \working of Tools from ICSE and FSE Demonstrations}
 
 \numberofauthors{75}
 
 \author{
-\alignauthor
+%\alignauthor
 Emerson Murphy-Hill\\
        \affaddr{Department of Computer Science}\\
        \affaddr{NC State University}\\
@@ -112,12 +171,15 @@ Many innovative software engineering tools appear at the field's premier venues,
 International Software Engineering Conference (ICSE) and the 
 Foundations of Software Engineering (FSE).
 But what happens to these tools after they were presented?
-In this paper, we spend 10,000 hours %update with real number 
+In this paper, we describe a class project where we spent 
+\durationTotal person hours
 trying to obtain, download, use, and repackage 150 %update
-tools from ICSE and FSE's tool demonstration tracks.
+tools from ICSE and FSE's tool demonstration tracks between 
+2011 and 2014.
 Our results enumerate the practical and accidental reasons that
 software engineering tools fail to work over time,
-and provide practical implications for creating lasting tools.
+and provide practical implications for creating lasting 
+research tools.
 \end{abstract}
 
 
@@ -181,7 +243,7 @@ We describe a study that examined the tools presented at the
 premier venues for software engineering research over the 
 past several years.
 As part of a graduate university course on software engineering, 
-we spent 10,000 hours trying to obtain, download, use
+we spent \durationTotal hours trying to obtain, download, use
 and repackage tools from the International Conference
 on Sofware Engineering (ICSE) and the Symposium on the Foundations
 of Software Engineering (FSE).
@@ -194,7 +256,7 @@ contributions in this paper:
   \item A synergistic course project for graduate software engineering students 
 		that gives students meaningful educational value \emph{and}
 		provides the research community value.
-  \item XXX existing tools repackaged in automatically-built virtual machines
+  \item \permissionToRedistribute existing tools repackaged in automatically-built virtual machines
   		to make it easier for others to use these tools.
 \end{itemize}
 
@@ -738,70 +800,6 @@ not available.
 
 \section{Results}
 
-\newcommand{\durationTotal}{6706\xspace}
-\newcommand{\durationCorresponding}{2\xspace}
-\newcommand{\durationWorking}{10\xspace}
-\newcommand{\durationVM}{10\xspace}
-\newcommand{\durationVagrant}{15\xspace}
-\newcommand{\durationWorkingOnWorkable}{10\xspace}
-\newcommand{\durationWorkingOnUnWorkable}{10\xspace}
-\newcommand{\emailsSent}{3\xspace}
-\newcommand{\emailsRecieved}{2\xspace}
-\newcommand{\durationAuthorResponse}{15\xspace}
-\newcommand{\durationAuthorResponseCountHigh}{20\xspace}
-\newcommand{\emailsHelpful}{82\%\xspace}
-\newcommand{\emailsFriendly}{85\%\xspace}
-\newcommand{\emailsIntimidating}{4\%\xspace}
-\newcommand{\emailsAnnoyed}{10\%\xspace}
-\newcommand{\emailsPercentSent}{92\%\xspace}
-\newcommand{\contactOSSed}{2\xspace}
-\newcommand{\contactFixLink}{3\xspace}
-\newcommand{\contactHosted}{4\xspace}
-\newcommand{\contactFixBug}{8\xspace}
-\newcommand{\contactFixDepl}{2\xspace}
-\newcommand{\papersWithLinks}{62\%\xspace}
-\newcommand{\papersWithLinksDead}{7\%\xspace}
-\newcommand{\papersWithLinksRevived}{44\%\xspace}
-\newcommand{\obtainPaper}{42\%\xspace}
-\newcommand{\obtainGoogle}{19\%\xspace}
-\newcommand{\obtainEmail}{20\%\xspace}
-\newcommand{\obtainNot}{20\%\xspace}
-\newcommand{\onlineGitHub}{25\%\xspace}
-\newcommand{\onlineSourceforge}{3\%\xspace}
-\newcommand{\onlineGcode}{4\%\xspace}
-\newcommand{\onlinePersonalSite}{28\%\xspace}
-\newcommand{\onlineNotAvail}{39\%\xspace}
-\newcommand{\onlineCodeplex}{2\%\xspace}
-\newcommand{\onlineBitbucket}{3\%\xspace}
-\newcommand{\working}{63\%\xspace}
-\newcommand{\unworkPay}{2\xspace}
-\newcommand{\unworkInternal}{9\xspace}
-\newcommand{\unworkNoResponseToAsk}{13\xspace}
-\newcommand{\unworkTooLate}{3\xspace}
-\newcommand{\unworkCouldntWorkIt}{19\xspace}
-\newcommand{\serviceRunning}{8\xspace}
-\newcommand{\serviceRunningLater}{2\xspace}
-\newcommand{\serviceRunningNever}{4\xspace}
-\newcommand{\redistPermissionArtifact}{43\xspace}
-\newcommand{\redistPermissionEmail}{31\xspace}
-\newcommand{\licenseMIT}{7\xspace}
-\newcommand{\licenseGPL2}{5\xspace}
-\newcommand{\licenseApache2}{7\xspace}
-\newcommand{\licenseGPL3}{4\xspace}
-\newcommand{\licenseBSD2}{6\xspace}
-\newcommand{\licenseLGPL21}{2\xspace}
-\newcommand{\licenseMPL}{2\xspace}
-\newcommand{\licenseEPL}{14\xspace}
-\newcommand{\depWindows}{22\xspace}
-\newcommand{\depVS}{6\xspace}
-\newcommand{\permissionToRedistribute}{49\xspace}
-
-
-
-\newcommand{\projectLikeThis}{45\%\xspace}
-\newcommand{\projectLikeOther}{26\%\xspace}
-\newcommand{\projectDontCare}{30\%\xspace}
-
 \subsection{RQ1: Effort}
 
 Through a survey near the end of the course, 
@@ -1014,11 +1012,11 @@ for redistirubtion in virtual machines.,
 Common licenses were:
 \licenseEPL had an Eclipse Public License license,
 \licenseMIT had an MIT license,
-\licenseApache2 had an Apache 2.0 license,
-\licenseBSD2 has a BSD 2.0 license,
-\licenseGPL2 had a GPL 2.0 license,
-\licenseGPL3 had a GPL 3.0 license,
-\licenseLGPL21 has a LGPL 2.0 license,
+\licenseApache had an Apache 2.0 license,
+\licenseBSD has a BSD 2.0 license,
+\licenseGPL had a GPL 2.0 license,
+\licenseGPLThree had a GPL 3.0 license,
+\licenseLGPL has a LGPL 2.0 license,
 \licenseMPL has a Microsoft Public License.
 Authors added open source licenses to \contactOSSed tools
 after we contacted them by email.	

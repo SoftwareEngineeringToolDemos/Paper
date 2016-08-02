@@ -167,16 +167,17 @@ Manav Verma ({mverma4@ncsu.edu}
 Many innovative software engineering tools appear at the field's premier venues, the 
 International Software Engineering Conference (ICSE) and the 
 Foundations of Software Engineering (FSE).
-But what happens to these tools after they were presented?
+But what happens to these tools after they are presented?
 In this paper, we describe a class project where we spent 
-\durationTotal person hours
+thousands of person hours
 trying to obtain, download, use, and repackage \totalToolsTried
-tools from ICSE and FSE's tool demonstration tracks between 
-2011 and 2014.
+tools from ICSE and FSE's tool demonstration tracks from
+2011 through 2014.
 Our results enumerate the practical and accidental reasons that
 software engineering tools fail to work over time,
 and provide practical implications for creating lasting 
 research tools.
+%TODO do you deliver on this?
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -186,10 +187,10 @@ software engineering tools; replication
 \section{Introduction}
 
 Sofware engineering research seeks to better
-understand software and how it is built and constructed.
+understand how software is built and constructed.
 While such understanding in isolation can be insightful,
-ultimately a substantial amount of such research 
-aims to impact the practice of software engineering.
+ultimately the bulk of such research 
+aims to impact practice.
 To do so, researchers can create recommendations
 for new software engineering practices, can 
 create educational techniques and materials, 
@@ -237,10 +238,11 @@ In doing so, we make the following three main
 contributions in this paper:
 
 \begin{itemize}
-  \item A study that evaluates the difficulty in getting tools 
+  \item A study that evaluates the difficulty in getting \totalToolsTried tools 
   		working across a variety of software engineering research.
   \item A synergistic course project for graduate software engineering students 
 		that gives students meaningful educational value \emph{and}
+		%TODO is this fair, given students didn't think they learned a lot?
 		provides the research community value.
   \item \permissionToRedistribute existing tools repackaged in automatically-built virtual machines
   		to make it easier for others to use these tools.
@@ -265,8 +267,6 @@ contributions in this paper:
 Our work is one specific foray into the topic of replicability
 in science, an area whose importance researchers and the public 
 increasingly cite.
-Replicability in computer science is no less important than in
-other scientific fields.
 Ince and colleagues ``argue that, with some exceptions, anything less 
 than the release of source programs is intolerable for 
 results that depend on computation''~\cite{ince2012case}.
@@ -291,38 +291,37 @@ community''~\cite{acmRepTaskforce}.
 While both task forces are actively working as of this writing, 
 in 2016 they released a policy that recommends certification of
 replicability and reproducibility~\cite{acmArtifactPolicy}.
-However, the motivation for this policy is based on studies
-``primarily in the biomedical field'' because so few
-studies exist in computer science.
+But because few replication studies exist in computer science,
+the motivation for this policy is based on studies
+``primarily in the biomedical field.''
 Our work provides data to inform such evolving policies.
 
 \subsection{Replicability Studies in Computer Science}
 
-Several other computer science subdisciplines have studied
-replicability.
-Kova{\v{c}}evi{\'c} evaluated 15 image processing papers to evaluate
-how well the papers described their algorithms and whether 
-implementations were available; she found that descriptions were
+Some computer science subdisciplines have attempted to replicate
+research involving software.
+Kova{\v{c}}evi{\'c} evaluated 15 image processing papers,
+finding that algorithm descriptions were
 generally adequate, but that none of the papers provided
 implementations~\cite{kovacevic2007encourage}.
 Later, Vanderwalle and Kova{\v{c}}evi{\'c} repeated that study on 134 
 image processing papers and found that 84\% provided implementation details
 and 9\% provided code~\cite{vandewalle2009reproducible}. 
 Our work differs in that we went beyond finding out whether code was available;
-we used and repackaged that code when possible.
+we ran and repackaged that code.
 
 Callberg and Proebsting's recent replicability work~\cite{collberg2016repeatability,proebsting2015repeatability},
 published after we had completed our study, is most similar to ours. 
-In it, the authors examined the systems desmcribed in 
+In it, the authors examined the systems described in 
 601 papers from 13 systems conferences from 2011 to 2013
-(including, relevant to this paper, OOPSLA and PLDI 2012).
+(including, relevant to our paper, OOPSLA and PLDI 2012).
 Of those papers:
 
 \begin{itemize}   
 \item in 85 cases, the authors provided code in the article; 
 \item in 54 cases, code could be found via web search,
 \item in 87 cases, the authors provided code upon request,
-\item in 146 cases, authors could not provide the code; and
+\item in 146 cases, authors refused to provide the code; and
 \item in 30 cases, authors did not respond to email.
 \end{itemize}
 
@@ -339,8 +338,8 @@ that:
 \end{itemize}
 
 \noindent
-Apart from studying software engineering tool demonstrations rather than
-technical papers from systems venues,
+Apart from studying tool demonstrations from software engineering venues
+rather than technical papers from systems venues,
 our work primarily complements Callberg and Proebsting's work in two
 ways.
 First, we used a stricter standard of acceptance; rather than just building
@@ -365,13 +364,13 @@ Likewise, Tantithamthavorn and colleagues' replication of this meta-study
 confirmed these results, but explained the problem as arising from 
 research groups reusing datasets and metrics~\cite{tantithamthavorn}.
 Our work complements these papers in that we evaluate a wider
-variety and a larger number of software engineering tools. 
+variety of software engineering tools.
 
 \subsection{Artifact Evaluation Committees}
 
 Researchers in programming languages, and to a lesser extent
-software engineering, have recently put their desire to 
-improve the state of reproducibility by forming
+software engineering, have recently implemented steps
+to increase reproducibility by forming
 \emph{artifact evaluation committees} (AECs).
 AECs run in parallel with program committees,
 and aim to review research artifacts, including tools.
@@ -379,18 +378,19 @@ At the top sofware engineering conferences,
 AECs have been run at the main technical track of 
 Foundations of Software Engineering 2011 and 2013 through 2015.
 Accepted research papers are encouraged, but not required, to 
-submit artifacts to AECs or to archive those artifacts
-after the conference.
+submit artifacts to AECs.
+Accepted artifacts may or may not be archived by 
+the authors after the conference.
 
-Several at least 10 past instantiations of AECs have reported data about 
+At least 10 past instantiations of AECs have reported data about 
 their outcomes, which Collberg and colleagues summarize~\cite{proebsting2015repeatability}.
-They find that about half of authors of accepted papers
-authors choose to submit artifacts, and that acceptance rates for those
+They find that typically about half of authors of accepted papers
+choose to submit artifacts, and that acceptance rates for those
 artifacts vary substantially.
 
 The results of AECs and the work described
 in this paper have similar goals and technical
-approach.
+approaches.
 Both aim to evaluate the artifact's 
 consistency with the paper,
 completeness,
@@ -407,7 +407,7 @@ AECs report only data from artifacts that authors choose to submit;
 we report data about all tools published at a 
 conference's tool demonstration track.
 AECs evaluate artifacts packaged by the authors themselves;
-we report on tools that, generally, we package outselves as a third-party.
+we report on tools that we package outselves as outsiders.
 AECs aim to evaluate artifacts during publication;
 our work aims to evaluate tools years after publication.
 AECs do not require the public distribution of artifacts;
@@ -419,7 +419,7 @@ the the situations in which tools ``disappear'' years
 after publication.
 At the same time, our work highlights some significant
 challenges to AECs by demonstrating the several
-fundamental reasons tools cannot be redistributed. 
+fundamental reasons tools cannot be archived. 
 
 
 \section{Research Questions}
@@ -433,7 +433,6 @@ respective tool demonstration tracks.
 \begin{enumerate}
   \item How much effort is required to get tools to work?
   \item What are the barriers to get tools to work?
-  \item How much effort is required to get tools to work in virtual machines?
   \item What are the barriers to get tools to work in virtual machines?
   \item To what extent is this study practical to implement in a classroom context?
 \end{enumerate}
@@ -1160,7 +1159,7 @@ surrounding each tool and the software it depends on.
 
 \redistPermissionArtifact tools were open-sourced, 
 under a variety of licenses, making them appropriate
-for redistirubtion in virtual machines.,
+for redistirubtion in virtual machines.
 Common licenses were:
 \licenseEPL had an Eclipse Public License license,
 \licenseMIT had an MIT license,
@@ -1168,8 +1167,8 @@ Common licenses were:
 \licenseBSD has a BSD 2.0 license,
 \licenseGPL had a GPL 2.0 license,
 \licenseGPLThree had a GPL 3.0 license,
-\licenseLGPL has a LGPL 2.0 license,
-\licenseMPL has a Microsoft Public License.
+\licenseLGPL had a LGPL 2.0 license,
+\licenseMPL had a Microsoft Public License.
 Authors added open source licenses to \contactOSSed tools
 after we contacted them by email.	
 Although they did not have an explicit license,

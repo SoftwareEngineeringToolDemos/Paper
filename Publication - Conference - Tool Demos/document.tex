@@ -1,6 +1,9 @@
-\documentclass{sig-alternate-05-2015}
+\documentclass[10pt,conference]{IEEEtran}
 \usepackage{xspace}
-\usepackage{enumitem}
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+
+\DeclareGraphicsExtensions{.pdf,.png}
 
 \begin{document}
 
@@ -68,105 +71,96 @@
 \newcommand{\projectLikeOther}{26\%\xspace}
 \newcommand{\projectDontCare}{30\%\xspace}
 
-\setcopyright{acmcopyright}
-
-\conferenceinfo{FSE '16}{November 13--19, 2016, Seattle, WA, USA}
-
 
 \title{Reviving \workingNum out of \totalToolsTried of Tools from ICSE and FSE}
 
-\numberofauthors{75}
 
-\author{
-%\alignauthor
-Emerson Murphy-Hill\\
-       \affaddr{Department of Computer Science}\\
-       \affaddr{NC State University}\\
-       \affaddr{Raleigh, NC, USA 27695}\\
-       \email{emerson@csc.ncsu.edu}}
+%TODO prolly shouldn't do this, but it allows me to have a \thanks for the long authorlist
+\IEEEoverridecommandlockouts
 
-\additionalauthors{Additional authors: 
-%Example:
-% John Smith (The Th{\o}rv{\"a}ld Group,
-% email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-% (The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).
+\author{\IEEEauthorblockN{Emerson Murphy-Hill}
+\IEEEauthorblockA{Department of Computer Science\\
+North Carolina State University\\
+Raleigh, North Carolina, USA\\
+emerson@csc.ncsu.edu}\thanks{
 %Alphabetical:
-Shabbir Abdul (\url{sabdul@ncsu.edu}), 
-Varun Aettapu (\url{vaettap@ncsu.edu}), 
-Sumeet Agarwal (\url{sagarwa6@ncsu.edu}), 
-Sindhu Anangur Vairavel (\url{sanangu@ncsu.edu}), 
-Rishi Avinash Anne (\url{raanne@ncsu.edu}), 
-Haris Mahmood Ansari (\url{hmansari@ncsu.edu}), 
-Ankit Bhandari (\url{abhanda3@ncsu.edu}), 
-Anand Bhanu (\url{bhanua@ncsu.edu}), 
-Aditya Vinayak Bhise (\url{avbhise@ncsu.edu}), 
-Saikrishna Teja Bobba (\url{sbobba3@ncsu.edu}), 
-Vineela Boddula (\url{vboddul@ncsu.edu}), 
-Venkata Krishna Sailesh Bommisetti (\url{vbommis@ncsu.edu}), 
-Dwayne Christian (Chris) Brown (\url{dcbrow10@ncsu.edu}), 
-Peter Morgan Chen (\url{pmchen@ncsu.edu}), 
-Yi Chun (\url{Yi-Chun}) Chen (\url{ychen74@ncsu.edu}), 
-Nikhil Chinthapallee (\url{nchinth@ncsu.edu}), 
-Karan Singh Dagar (\url{kdagar@ncsu.edu}), 
-Joseph Decker (\url{jdecker@ncsu.edu}), 
-Pankti Rakeshkumar Desai (\url{prdesai2@ncsu.edu}), 
-Jayant Dhawan (\url{jdhawan2@ncsu.edu}), 
-Yihuan Dong (\url{ydong2@ncsu.edu}),
-Sarah Elizabeth Elder (\url{seelder@ncsu.edu}), 
-Shrenuj Gunvant Gandhi (\url{sgandhi4@ncsu.edu}), 
-Jennifer Michelle Green (\url{jmgree17@ncsu.edu}), 
-Mohammed Hasibul Hassan (\url{mhhassan@ncsu.edu}), 
-Satish Inampudi (\url{sinampu@ncsu.edu}), 
-Pragyan Paramita Jena (\url{ppjena@ncsu.edu}), 
-Bhargav Rahul (\url{Bhargav}) Jhaveri (\url{bjhaver@ncsu.edu}), 
-Apoorv Vijay Joshi (\url{avjoshi@ncsu.edu}), 
-Nikhil Josyabhatla (\url{njosyab@ncsu.edu}), 
-Sujith Katakam (\url{skataka@ncsu.edu}), 
-Juzer Husainy Khambaty (\url{jhkhamba@ncsu.edu}), 
-Aneesh Arvind Kher (\url{aakher@ncsu.edu}), 
-Craig Kimpel (\url{ckimpal@ncsu.edu}), 
-Siddhartha Kollipara (\url{skollip@ncsu.edu}), 
-Asish Prabhakar Kottala (\url{akottal@ncsu.edu}), 
-Abishek Kumar (\url{akumar21@ncsu.edu}), 
-Harini Reddy Kumbum (\url{hkumbum@ncsu.edu}), 
-Nitish Pradeep Limaye (\url{nplimaye@ncsu.edu}), 
-Apoorv Mahajan (\url{amahaja3@ncsu.edu}), 
-Sai Sindhur Malleni (\url{smallen3@ncsu.edu}), 
-Sudha Manchukonda (\url{smanchu@ncsu.edu}), 
-Kavit Maral Mehta (\url{kmmehta@ncsu.edu}), 
-Justin Alan Middleton (\url{jamiddl2@ncsu.edu}), 
-Ramakant Moka (\url{rmoka@ncsu.edu}), 
-Eesha Gopalakrishna Mulky (\url{egmulky@ncsu.edu}), 
-Gauri Naik (\url{gnaik2@ncsu.edu}), 
-Shraddha Anil Naik (\url{sanaik2@ncsu.edu}), 
-Yashwanth Nallabothu (\url{ynallab@ncsu.edu}), 
-Yogesh Nandakumar (\url{ynandak@ncsu.edu}), 
-Kairav Sai Padarthy (\url{kspadart@ncsu.edu}), 
-Pulkesh Kumar Yadav Pannalal (\url{ppannal@ncsu.edu}), 
-Sattwik Pati (\url{spati2@ncsu.edu}), 
-Kahan Prabhu (\url{kprabhu@ncsu.edu}), 
-Shashank Goud Pulimamidi (\url{spulima@ncsu.edu}), 
-Gargi Sandeep Rajadhyaksha (\url{gsrajadh@ncsu.edu}), 
-Priyadarshini Rajagopal (\url{prajago4@ncsu.edu}), 
-Venkatesh Sambandamoorthy (\url{vsamban@ncsu.edu}), 
-Mohan Sammeta (\url{msammet@ncsu.edu}), 
-Shaown Sarker (\url{ssarker@ncsu.edu}), 
-Anshita Sayal (\url{asayal@ncsu.edu}), 
-Vrushti Kamleshkumar Shah (\url{vkshah@ncsu.edu}), 
-Esha Sharma (\url{esharma2@ncsu.edu}), 
-Saurav Shekhar (\url{sshekha3@ncsu.edu}), 
-Sarthak Prabhakar Shetty (\url{spshetty@ncsu.edu}), 
-Manish Ramashankar Singh (\url{mrsingh@ncsu.edu}), 
-Ankush Kumar Singh (\url{asingh21@ncsu.edu}), 
-Vinay Kumar Suryadevara (\url{vksuryad@ncsu.edu}), 
-Sumit Kumar Tomer (\url{sktomer@ncsu.edu}), 
-Akriti Tripathi (\url{atripat4@ncsu.edu}), 
-Jennifer Tsan (\url{jtsan@ncsu.edu}), 
-Vivekananda Vakkalanka (\url{vvakkal@ncsu.edu}), 
-Alexander Valkovsky (\url{avalkov@ncsu.edu}), 
-Rishi Kumar Vardhineni (\url{rkvardhi@ncsu.edu}) and
-Manav Verma (\url{mverma4@ncsu.edu}).}
-%\date{30 July 1999}
+\textsc{Additional Authors:}
+Shabbir Abdul ({sabdul@ncsu.edu}),
+Varun Aettapu ({vaettap@ncsu.edu}),
+Sumeet Agarwal ({sagarwa6@ncsu.edu}),
+Sindhu Anangur Vairavel ({sanangu@ncsu.edu}),
+Rishi Avinash Anne ({raanne@ncsu.edu}),
+Haris Mahmood Ansari ({hmansari@ncsu.edu}),
+Ankit Bhandari ({abhanda3@ncsu.edu}),
+Anand Bhanu ({bhanua@ncsu.edu}),
+Aditya Vinayak Bhise ({avbhise@ncsu.edu}),
+Saikrishna Teja Bobba ({sbobba3@ncsu.edu}),
+Vineela Boddula ({vboddul@ncsu.edu}),
+Venkata Krishna Sailesh Bommisetti ({vbommis@ncsu.edu}),
+Dwayne Christian (Chris) Brown ({dcbrow10@ncsu.edu}),
+Peter Morgan Chen ({pmchen@ncsu.edu}),
+Yi Chun ({Yi-Chun}) Chen ({ychen74@ncsu.edu}),
+Nikhil Chinthapallee ({nchinth@ncsu.edu}),
+Karan Singh Dagar ({kdagar@ncsu.edu}),
+Joseph Decker ({jdecker@ncsu.edu}),
+Pankti Rakeshkumar Desai ({prdesai2@ncsu.edu}),
+Jayant Dhawan ({jdhawan2@ncsu.edu}),
+Yihuan Dong ({ydong2@ncsu.edu}),
+Sarah Elizabeth Elder ({seelder@ncsu.edu}),
+Shrenuj Gunvant Gandhi ({sgandhi4@ncsu.edu}),
+Jennifer Michelle Green ({jmgree17@ncsu.edu}),
+Mohammed Hasibul Hassan ({mhhassan@ncsu.edu}),
+Satish Inampudi ({sinampu@ncsu.edu}),
+Pragyan Paramita Jena ({ppjena@ncsu.edu}),
+Bhargav Rahul ({Bhargav}) Jhaveri ({bjhaver@ncsu.edu}),
+Apoorv Vijay Joshi ({avjoshi@ncsu.edu}),
+Nikhil Josyabhatla ({njosyab@ncsu.edu}),
+Sujith Katakam ({skataka@ncsu.edu}),
+Juzer Husainy Khambaty ({jhkhamba@ncsu.edu}),
+Aneesh Arvind Kher ({aakher@ncsu.edu}),
+Craig Kimpel ({ckimpal@ncsu.edu}),
+Siddhartha Kollipara ({skollip@ncsu.edu}),
+Asish Prabhakar Kottala ({akottal@ncsu.edu}),
+Abishek Kumar ({akumar21@ncsu.edu}),
+Harini Reddy Kumbum ({hkumbum@ncsu.edu}),
+Nitish Pradeep Limaye ({nplimaye@ncsu.edu}),
+Apoorv Mahajan ({amahaja3@ncsu.edu}),
+Sai Sindhur Malleni ({smallen3@ncsu.edu}),
+Sudha Manchukonda ({smanchu@ncsu.edu}),
+Kavit Maral Mehta ({kmmehta@ncsu.edu}),
+Justin Alan Middleton ({jamiddl2@ncsu.edu}),
+Ramakant Moka ({rmoka@ncsu.edu}),
+Eesha Gopalakrishna Mulky ({egmulky@ncsu.edu}),
+Gauri Naik ({gnaik2@ncsu.edu}),
+Shraddha Anil Naik ({sanaik2@ncsu.edu}),
+Yashwanth Nallabothu ({ynallab@ncsu.edu}),
+Yogesh Nandakumar ({ynandak@ncsu.edu}),
+Kairav Sai Padarthy ({kspadart@ncsu.edu}),
+Pulkesh Kumar Yadav Pannalal ({ppannal@ncsu.edu}),
+Sattwik Pati ({spati2@ncsu.edu}),
+Kahan Prabhu ({kprabhu@ncsu.edu}),
+Shashank Goud Pulimamidi ({spulima@ncsu.edu}),
+Gargi Sandeep Rajadhyaksha ({gsrajadh@ncsu.edu}),
+Priyadarshini Rajagopal ({prajago4@ncsu.edu}),
+Venkatesh Sambandamoorthy ({vsamban@ncsu.edu}),
+Mohan Sammeta ({msammet@ncsu.edu}),
+Shaown Sarker ({ssarker@ncsu.edu}),
+Anshita Sayal ({asayal@ncsu.edu}),
+Vrushti Kamleshkumar Shah ({vkshah@ncsu.edu}),
+Esha Sharma ({esharma2@ncsu.edu}),
+Saurav Shekhar ({sshekha3@ncsu.edu}),
+Sarthak Prabhakar Shetty ({spshetty@ncsu.edu}),
+Manish Ramashankar Singh ({mrsingh@ncsu.edu}),
+Ankush Kumar Singh ({asingh21@ncsu.edu}),
+Vinay Kumar Suryadevara ({vksuryad@ncsu.edu}),
+Sumit Kumar Tomer ({sktomer@ncsu.edu}),
+Akriti Tripathi ({atripat4@ncsu.edu}),
+Jennifer Tsan ({jtsan@ncsu.edu}),
+Vivekananda Vakkalanka ({vvakkal@ncsu.edu}),
+Alexander Valkovsky ({avalkov@ncsu.edu}),
+Rishi Kumar Vardhineni ({rkvardhi@ncsu.edu}) and
+Manav Verma ({mverma4@ncsu.edu}
+}}
 
 \maketitle
 \begin{abstract}
@@ -185,25 +179,9 @@ and provide practical implications for creating lasting
 research tools.
 \end{abstract}
 
-
-%
-% The code below should be generated by the tool at
-% http://dl.acm.org/ccs.cfm
-\begin{CCSXML}
-<ccs2012>
-<concept>
-<concept_id>10002944.10011123.10010912</concept_id>
-<concept_desc>General and reference~Empirical studies</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-</ccs2012>
-\end{CCSXML}
-
-\ccsdesc[300]{General and reference~Empirical studies}
-
-\printccsdesc
-
-\keywords{Software engineering tools; replication}
+\begin{IEEEkeywords}
+software engineering tools; replication
+\end{IEEEkeywords}
 
 \section{Introduction}
 
@@ -340,7 +318,7 @@ In it, the authors examined the systems desmcribed in
 (including, relevant to this paper, OOPSLA and PLDI 2012).
 Of those papers:
 
-\begin{itemize}[itemsep=0mm]   
+\begin{itemize}   
 \item in 85 cases, the authors provided code in the article; 
 \item in 54 cases, code could be found via web search,
 \item in 87 cases, the authors provided code upon request,
@@ -352,7 +330,7 @@ Of those papers:
 Furthermore, Callberg and Proebsting's team tried to get the tools to build, finding
 that:
 
-\begin{itemize}[itemsep=0mm]   
+\begin{itemize} 
 \item in 130 cases, the code was built in 30 minutes or less;
 \item in 64 cases, the code was built in more than 60 minutes;
 \item in 23 cases, the code's original authors assured the team that the code could be
@@ -936,7 +914,7 @@ and calls four shell scripts interspersed with operating system
 restarts.
 The external shell script shown removes some unneeded software,
 and installs some prerequisites to the tool, including Eclipse and
-an ocaml compiler. 
+an OCaml compiler. 
 
 \begin{figure}[t]
   \centering

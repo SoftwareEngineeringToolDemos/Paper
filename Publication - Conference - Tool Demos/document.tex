@@ -235,10 +235,15 @@ First, the full details of how the tool works, both in terms of its internals
 and from an end-user perspective, may not be clear from the paper.
 Second, making the tools available can help pracitioners try and adopt
 the tools in their work.
-Third, it helps facilitate reproducibility by enabling future researchers
-to perform studies with the original tools.
-Finally, it helps the advancement of the field by allowing others to build on 
+Third, it helps the advancement of the field by allowing others to build on 
 existing tools, rather than re-buiding them from scratch.
+Finally, it helps facilitate replicability by enabling future researchers
+to perform studies with the original tools.
+In this paper, we use the term replicability~\cite{vim2004international}
+to refer to ``an independent group [obtaining] the same result using 
+the author's own artifacts''~\cite{acmArtifactPolicy}.
+Although artifacts in replications also commonly includes data,
+in this paper we focus on software.
 
 Despite the benefits of making tools available, in this paper
 we catalog the practical difficulties in doing so.
@@ -265,14 +270,6 @@ contributions in this paper:
 
 \section{Related Work}
 
-timeliness
-New ACM Policy
-
-General scientific interest in reproducibility.
-How it fits with other Rs.
-State of practice.
-
-
 % Other fields:
 % - Data science (doing better - http://zenodo.org)
 % - MPC journal requires code submission (tarball)
@@ -282,26 +279,49 @@ State of practice.
 % - RTC is starting to do it, but maybe shouldn't
 % Constant worry is protecting IP in security and HPC
 
-\subsection{Reproducibility}
+\subsection{Replicability in Science Policy}
 
-%TODO more theory here; what's the base definitions you're working from? we're narrow, but from what to what? \
-%Collberg calls in repeatibility, but Krishnamurthy disagrees
+%TODO more theory here
 %See Tim's paper he sent
 
-Our work is one specific foray into the topic of reproducibility 
+Our work is one specific foray into the topic of replicability
 in science, an area whose importance researchers and the public 
 increasingly cite.
-In a survey of 1,500 scientists across disciplines, the journal
-Nature reported that 70\% of researchers have attempted
-and failed to replicate others' experiments~\cite{baker20161}.
-Reproducibility in computer science is no less important than in
+Replicability in computer science is no less important than in
 other scientific fields.
 Ince and colleagues ``argue that, with some exceptions, anything less 
 than the release of source programs is intolerable for 
 results that depend on computation''~\cite{ince2012case}.
- 
+
+Both in science generally and in computer science specifically,
+the urgency of increasing replicability has increased sharply.
+In a 2016 survey of 1,500 scientists across disciplines, the journal
+Nature reported that 70\% of researchers have attempted
+and failed to replicate others' experiments~\cite{baker20161}.
+A 2015 study in the journal Science 
+attempted to replicate 100 psychology experiments,
+finding that a ``large portion of replications produced weaker evidence for the original findings''~\cite{open2015estimating}.
+
+In computer science, the Association for Computing Machinery has
+recently formed the ``Task Force on Data, Software, and Reproducibility in Publication''
+and the ``Replication Taskforce.''
+The goals of these taskforces are to 
+``promote practices that lead to better replicability''~\cite{acmDataTaskforce} and 
+``develop proposals on how ACM can bring current replication and 
+verification practices in line with the rest of the scientific 
+community''~\cite{acmRepTaskforce}.
+While both task forces are actively working as of this writing, 
+in 2016 they released a policy that recommends certification of
+replicability and reproducibility~\cite{acmArtifactPolicy}.
+However, the motivation for this policy is based on studies
+``primarily in the biomedical field'' because so few
+studies exist in computer science.
+Our work provides data to inform such evolving policies.
+
+\subsection{Replicability Studies in Computer Science}
+
 Several other computer science subdisciplines have studied
-reproducibility.
+replicability.
 Kova{\v{c}}evi{\'c} evaluated 15 image processing papers to evaluate
 how well the papers described their algorithms and whether 
 implementations were available; she found that descriptions were
@@ -313,7 +333,7 @@ and 9\% provided code~\cite{vandewalle2009reproducible}.
 Our work differs in that we went beyond finding out whether code was available;
 we used and repackaged that code when possible.
 
-Callberg and Proebsting's recent repeatability work~\cite{collberg2016repeatability,proebsting2015repeatability},
+Callberg and Proebsting's recent replicability work~\cite{collberg2016repeatability,proebsting2015repeatability},
 published after we had completed our study, is most similar to ours. 
 In it, the authors examined the systems desmcribed in 
 601 papers from 13 systems conferences from 2011 to 2013
@@ -352,7 +372,7 @@ repackage the tools as a contribution to the community, so that other
 researchers would not have to duplicate our efforts. 
 
 Other papers in software engineering have also explored 
-reproducibility with tools.
+replicability with tools.
 Klein and colleagues selected 9 papers from ICFP 2009 to
 re-implement as formal models in their domain specific language;
 they found mistakes in all 9 papers~\cite{klein2012run}.
@@ -360,7 +380,7 @@ Mende attempted to replicate prior results using two
 existing defect predictors, finding that even
 ``with access to the original data sets, replicating
 previous studies may not lead to the exact same results''~\cite{mende2010replication}.
-More recently, Shepperd and colleagues' repeated 42 studies 
+More recently, Shepperd and colleagues' replicated 42 studies 
 using defect predictors, finding that the research group 
 performing the analysis has a strong effect on performance~\cite{shepperd}.
 Likewise, Tantithamthavorn and colleagues' replication of this meta-study
@@ -373,7 +393,7 @@ variety and a larger number of software engineering tools.
 
 Researchers in programming languages, and to a lesser extent
 software engineering, have recently put their desire to 
-improve the state of reproducibility in research by forming
+improve the state of reproducibility by forming
 \emph{artifact evaluation committees} (AECs).
 AECs run in parallel with program committees,
 and aim to review research artifacts, including tools.

@@ -1,6 +1,6 @@
 \documentclass{sig-alternate-05-2015}
 \usepackage{xspace}
-\usepackage{tablefootnote}
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -320,7 +320,7 @@ In it, the authors examined the systems desmcribed in
 (including, relevant to this paper, OOPSLA and PLDI 2012).
 Of those papers:
 
-\begin{itemize}   
+\begin{itemize}[itemsep=0mm]   
 \item in 85 cases, the authors provided code in the article; 
 \item in 54 cases, code could be found via web search,
 \item in 87 cases, the authors provided code upon request,
@@ -332,7 +332,7 @@ Of those papers:
 Furthermore, Callberg and Proebsting's team tried to get the tools to build, finding
 that:
 
-\begin{itemize}   
+\begin{itemize}[itemsep=0mm]   
 \item in 130 cases, the code was built in 30 minutes or less;
 \item in 64 cases, the code was built in more than 60 minutes;
 \item in 23 cases, the code's original authors assured the team that the code could be
@@ -356,11 +356,16 @@ reproducibility with tools.
 Klein and colleagues selected 9 papers from ICFP 2009 to
 re-implement as formal models in their domain specific language;
 they found mistakes in all 9 papers~\cite{klein2012run}.
-%TODO is this Tim's paper on Repeatability in AI-SE: ``depends on who does it''?
 Mende attempted to replicate prior results using two 
 existing defect predictors, finding that even
 ``with access to the original data sets, replicating
 previous studies may not lead to the exact same results''~\cite{mende2010replication}.
+More recently, Shepperd and colleagues' repeated 42 studies 
+using defect predictors, finding that the research group 
+performing the analysis has a strong effect on performance~\cite{shepperd}.
+Likewise, Tantithamthavorn and colleagues' replication of this meta-study
+confirmed these results, but explained the problem as arising from 
+research groups reusing datasets and metrics~\cite{tantithamthavorn}.
 Our work complements these papers in that we evaluate a wider
 variety and a larger number of software engineering tools. 
 
@@ -1368,8 +1373,10 @@ Challenges:
 
 Some other things.
 
-%ACKNOWLEDGMENTS are optional
-%\section{Acknowledgments}
+\section*{Acknowledgments}
+
+Thanks to Tim Menzies, Gail Murphy, and Thomas Zimmermann
+for their helpful comments on drafts of this paper.  
 
 
 \bibliographystyle{abbrv}

@@ -677,7 +677,7 @@ the username and password, so such requirements were
 not included in the grading rubric for the script.
 The most substantial additional requirement for the script
 was that it uses ``standard and stable external resources 
-whenever possible (e.g., www.vagrantbox.es, rather than a 
+whenever possible (e.g., \url{www.vagrantbox.es}, rather than a 
 hand-built box)''.
 
 \subsubsection{Redistributing the Tools}
@@ -696,7 +696,7 @@ permission to do so, we redistributed that code
 in our tool's repository.
 The same applied to the tools' binary.
 If the tool was working, 
-vagrant scripts were also included in the repository,
+Vagrant scripts were also included in the repository,
 regardless of whether we had permission to redistribute
 the tool; if we did not, users would have to contact the 
 researchers and drop in the tool (a binary, for instance)
@@ -778,9 +778,9 @@ two rounds by the TAs, where students enahanced their
 images between rounds and the rubrics were updated
 for the second round based on what the TAs 
 observed in the first.
-Likewise, vagrant scripts were evaluated in two rounds
+Likewise, Vagrant scripts were evaluated in two rounds
 by the TAs.
-Finally, TAs evaluated all artifacts (images, vagrant 
+Finally, TAs evaluated all artifacts (images, Vagrant 
 scripts, and repositories) together in a final project 
 evaluation.
 
@@ -839,7 +839,7 @@ and additional information that we added about the tool.
 
 Figure~\ref{fig:vagrant} shows the Vagrant script and 
 part of an external script that builds the virtual machine.
-The vagrant script installs a plugin, 
+The Vagrant script installs a plugin, 
 uses a base virtual machine image from the boxcutter 
 community,\footnote{\url{https://atlas.hashicorp.com/boxcutter}}
 and calls four shell scripts interspersed with operating system 
@@ -870,7 +870,7 @@ she only has to download the virtual machine image.
 \begin{figure}[t]
   \centering
     \includegraphics[width=0.5\textwidth]{vm.png}
-  \caption{Screenshot of jStar-eclipse in a virtual machine.}\label{fig:vm}
+  \caption{Screenshot of jStar Eclipse in a virtual machine.}\label{fig:vm}
 \end{figure}
 
 In the remainder of the paper, we do not call out 
@@ -891,20 +891,19 @@ teams estimated how long they spent
 corresponding with researchers,
 getting a tool to work,
 getting it to work in a virtual machine,
-and getting it to work with vagrant.
+and getting it to work with Vagrant.
+Figure~\ref{fig:duration} shows the distribution of
+these times in the form of a violin plot.
 The median time teams spent corresponding with
 researchers was \durationCorresponding hours.
 For tools where teams obtained the tool,
 they spent a median of \durationWorking hours
 trying to get it to work.
 For tools where the teams got a tool working,
-they spent a median of \durationVM getting it working 
+they spent a median of \durationVM hours getting it working 
 in a virtual machine image and
 \durationVagrant hours generating a working tool
 image with Vagrant.
-Figure
-Figure~\ref{fig:duration} shows the distribution of
-these times in the form of a violin plot.
 In total, teams spent \durationTotal hours working
 on all tools combined.
 
@@ -914,8 +913,8 @@ on all tools combined.
   \caption{Time spent by teams performing four project activities.}\label{fig:duration}
 \end{figure}
 
-The survey also asked participants if they spent
-additional time on their projects.
+The survey also asked teams if they spent
+time on other activities during the project.
 In addition to project requirements like establishing
 the GitHub repository, teams 
 reported spending additional time 
@@ -934,7 +933,7 @@ getting a tool to work with a variety of examples.
   \caption{Summary of emails sent and received.}\label{fig:emailSnR}
 \end{figure}
 
-Because a significant portion of participants' time was
+Because a significant portion of teams' time was
 spent corresponding with the researchers,
 the survey also asked teams about their email interactions.
 Overall, teams sent emails for \emailsPercentSent of tools.
@@ -949,7 +948,7 @@ and researchers appeared generally responsive.
 
 The effort spent to get a tool working was not only
 borne by us, but also the researchers who 
-read and responed to our emails.
+responded to our emails.
 To minimize researchers' effort, we did not ask researchers directly.
 Instead, we asked teams to estimate how much time researchers spent 
 reading and responding to our emails, including time for 
@@ -960,11 +959,19 @@ to spend more than an hour.
 
 \subsection{RQ2: Barriers to Getting Tools Working}
 
+We next describe three barriers we encountered 
+to getting the tools working:
+obtaining the tools from the paper,
+obtaining compliance from the researchers,
+and technical challenges. 
+
+%TODO numbers or percentages?
+
 \subsubsection{Obtaining the Tools from the Paper}
 
 Teams found that about \papersWithLinks papers
 contained links to online information about their tools.
-Team also found that \papersWithLinksDead papers
+Teams also found that \papersWithLinksDead papers
 had links that were no longer functional,
 where \papersWithLinksRevived of those links
 being fixed after teams emailed the researchers.
@@ -994,15 +1001,15 @@ Many tools were available on open code repositories:
 \onlineSourceforge on Souceforge,
 \onlineBitbucket on Bitbucket,
 and \onlineCodeplex on CodePlex.
-Of these, \contactHosted tools began hosting 
-on a public repository after
-we contacted the researchers.
+Of these, researchers began hosting \contactHosted tools 
+on public repositories after
+we contacted them.
 
 Even when tools were ostensibly available,
 sometimes critical pieces were missing,
 as reported by teams in freeform text on the survey.
-Teams reported missing configuration files
-settings that needed to be edited before use, 
+Teams reported missing configuration files,
+settings that needed to be edited, 
 information about IDE compatibility,
 sample input,
 and steps required for installation. 
@@ -1013,7 +1020,7 @@ While researchers were generally responsive to emails,
 they were not necessarily responsive or compliant 
 with the requests contained in those emails.
 Figure~\ref{fig:requests} lists what teams requested from researchers
-(horizontally) and whether researchers complied (colors).
+(horizontally) and whether researchers complied (bars).
 Overall, each kind of request was met with substantial non-response and
 non-compliance.
 Beyond these requests, teams reported needing to ask for 
@@ -1030,17 +1037,14 @@ they were developed in.
 they may have worked if we had been willing to pay 
 for the dependencies.
 
-Several tools were not available to us, 
-and the researchers were unwilling or unable to do so.
-For two tools, the researcher was simply unavailable,
-without further explanation.
-For one tool, the researcher was uncomfortable making 
-the tool available.
-For another, the researcher said the tool was only a prototype.
-For another, the researcher stated that the tool had too
-many dependencies with other tools.
-For another, the researcher stated that the tool does not
-exist anymore.
+Several tools were not available, 
+and the researchers were unwilling or unable make them so:
+researchers for two tools were simply unavailable,
+without further explanation; 
+one researcher was uncomfortable making the tool available;
+one said the tool was only a prototype;
+one stated that the tool had too many dependencies with other tools;
+and one stated that the tool does not exist anymore.
 
 \begin{figure}[!t]
   \centering
@@ -1075,14 +1079,14 @@ software whose versions were unspecified
 (and at least once forgotten by the researcher), and teams
 failed to get the tools working with the versions they
 tried.
-Teams also described having issues with 
+Teams described problems with 
 tool configuration,
 missing functionality, and
 missing or corrupted program files or data.
 After contacting the researchers, teams reported that researchers 
 fixed bugs in \contactFixBug tools,
-fixed deployment issues for \contactFixDepl tools,
-and fixed some problems with dependencies.
+fixed deployment issues in \contactFixDepl tools,
+and fixed some problems with dependencies in one tool.
 
 \subsection{RQ3: Barriers to Virtualizing}
 
@@ -1095,14 +1099,14 @@ surrounding each tool and the software it depends on.
 under a variety of licenses, making them appropriate
 for redistribution in virtual machines.
 Common licenses were:
-\licenseEPL had an Eclipse Public License license,
-\licenseMIT had an MIT license,
-\licenseApache had an Apache 2.0 license,
-\licenseBSD has a BSD 2.0 license,
-\licenseGPL had a GPL 2.0 license,
-\licenseGPLThree had a GPL 3.0 license,
-\licenseLGPL had a LGPL 2.0 license,
-\licenseMPL had a Microsoft Public License.
+\licenseEPL with an Eclipse Public License license,
+\licenseMIT with an MIT license,
+\licenseApache with an Apache 2.0 license,
+\licenseBSD with a BSD 2.0 license,
+\licenseGPL with a GPL 2.0 license,
+\licenseGPLThree with a GPL 3.0 license,
+\licenseLGPL with a LGPL 2.0 license,
+\licenseMPL with a Microsoft Public License.
 Researchers added open source licenses to \contactOSSed tools
 after we contacted them by email.	
 Although they did not have an explicit license,
@@ -1135,7 +1139,7 @@ and contain relevant tool artifacts such as source code
 and binaries.
 A total of 62 repositories 
 % based on https://github.com/search?q=org%3ASoftwareEngineeringToolDemos+Vagrant.configure&ref=searchresults&type=Code&utf8=%E2%9C%93
-contain vagrant scripts to build 
+contain Vagrant scripts to build 
 virtual machines that contain the tools. 
 
 \subsection{RQ4: Classroom}
@@ -1167,7 +1171,7 @@ primary one appeared to be that the course was more work
 than they had expected.
 Although other changes had been made to the course, 
 most notably ``flipping'' the lectures~\cite{flipped},
-the main one was the project, so the project load
+the main change was the project, so the project workload
 was likely responsible for the drops.
 
 With respect to low student evaluations of the project,
@@ -1192,7 +1196,7 @@ as described below.
   	such as Slack, scrum, or cloud-based virtual machines.
   	Second, the easiest way to break down work was to assign one person in a team
   	to work on one tool; because each tool generally worked independently
-  	from other tools, it appeared that teammates worked in a fairly siloed way.  	
+  	from other tools, it appeared that teammates worked in a siloed way.  	
   	Third, teams lacked cohesiveness because teammates were assigned randomly.
   	Because many students dropped the course, team cohesiveness may have 
 	been reduced further.
@@ -1205,7 +1209,7 @@ as described below.
   	some tools were easy to get working, while others were extremely difficult.
   	The instructor originally aimed to improve fairness by assigning multiple tools
   	to teams, so that average tool difficulty across teams should be roughly equivalent.
-  	However, the siloing within teams still meant that some students were doing
+  	However, within-team siloing resulted in some students were doing
   	significantly more work than other students.  
   	Breaking down the silos may improve this inequity problem.
   	This may also be an opportunity to create an assignment that applies the course
@@ -1213,13 +1217,12 @@ as described below.
 
 \textbf{Vagrant Scripting.}
   	Vagrant scripting turned out more challenging than anticipated.
-  	One reason was that install software on Windows machines is difficult
+  	One reason was that installing software on Windows machines is difficult
   	due to operating system security checks.
   	Another difficulty was some scripts needed large files, which GitHub could not
   	store, so these scripts needed to load data from other locations 
-  	(such as Google Drive), decreasing the likelihood that these scripts will
-  	continue to function correctly over time. 
-  	Building vagrant vagrant scripts should be easier in the future, now that
+  	(such as Google Drive), decreasing our repositories' archival value. 
+  	Building Vagrant scripts should be easier in the future, now that
   	we have a repository of examples that include, for instance, how to
   	use a Windows package manager and how to 
   	install Eclipse and load Eclipse workspaces. 
@@ -1232,7 +1235,7 @@ as described below.
 \textbf{Unusual Grading.} 
 	The instructor recognized that the grading strategy of making substantial
 	grade adjustments when teams got unworkable tools working would be 
-	controversial among students.
+	controversial.
 	Four out of 44 students complained about this in the anonymous course
 	evaluation.
 	Only one team ended up getting an unworkable tool working, and this team expressed
@@ -1245,10 +1248,11 @@ as described below.
 \textbf{In-Class Presentations.}
   	Although in-class presentations were only 5 minutes per tool, as a whole they
   	took up an inordinate amount of class time.
-  	For future iterations of the projects, students will instead make videos posted
-  	online about their tools, and perhaps only one tool per team will be presented
+  	For future iterations of the projects, students will instead make videos 
+  	about their tools, and perhaps only one tool per team will be presented
   	in class.
  
+\vspace{3mm}
 Finally, despite the challenges with the course, the instructor's opinion is that 
 the course was highly worthwhile.
 He knows of no other software engineering courses that integrate research into 
@@ -1268,14 +1272,15 @@ What are the implications for researchers? For conferences?
 
 Come back to interesting findings:
 * Services (appendix)
-* Disappearing tools
+* Disappearing tools (hard drive, google code, unexplained)
 * license things, people!
 * OSS licenses, but please don't redistribute
 * Email is soooo bad; non-response vs. non-compliance. lots of requests just ``got lost''
-* Should AECs use vagrant scripts? Good for archival purposes.
+* Should AECs use Vagrant scripts? Good for archival purposes. Sidestepped Windows licensing issues.
 * One researcher said tool just doesn't exist anymore.
 * Another researcher had to dig tool out of long term archive.
 * Several researchers (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
+* Thanks for permission to redistribute, but it's legally a pretty grey area.
 * Threats: quality, etc (See Shriram's replication to demonstrate problems). Data reliability.
 
 \subsection{Implications for Research}

@@ -213,10 +213,10 @@ there are several reasons why software engineering researchers
 should make the tools themselves available.
 First, the full details of how the tool works, both in terms of its internals
 and from an end-user perspective, may not be clear from the paper.
-Second, making the tools available can help pracitioners try and adopt
+Second, making the tools available can help practitioners try and adopt
 the tools in their work.
 Third, it helps the advancement of the field by allowing others to build on 
-existing tools, rather than re-building them from scratch.
+existing tools, rather than rebuilding them from scratch.
 Finally, it helps facilitate replicability by enabling future researchers
 to perform studies with the original tools.
 In this paper, we use the term replicability~\cite{vim2004international}
@@ -272,9 +272,9 @@ Ince and colleagues ``argue that, with some exceptions, anything less
 than the release of source programs is intolerable for 
 results that depend on computation''~\cite{ince2012case}.
 
-Both in science generally and in computer science specifically,
+Both, in science generally and in computer science specifically,
 the urgency of increasing replicability has increased sharply.
-In a 2016 survey of 1,500 scientists across disciplines, the journal
+In a 2016 survey of 1500 scientists across disciplines, the journal
 Nature reported that 70\% of researchers have attempted
 and failed to replicate others' experiments~\cite{baker20161}.
 A 2015 study in the journal Science 
@@ -352,7 +352,7 @@ researchers would not have to duplicate our efforts.
 Other papers in software engineering have also explored 
 replicability with tools.
 Klein and colleagues selected 9 papers from ICFP 2009 to
-re-implement as formal models in their domain specific language;
+re-implement as formal models in their domain-specific language;
 they found mistakes in all 9 papers~\cite{klein2012run}.
 Mende attempted to replicate prior results using two 
 existing defect predictors, finding that even
@@ -415,7 +415,7 @@ distribution of artifacts is one of our primary goals.
 
 Regardless of the similarities and differences,
 our study motivates the need for AECs by demonstrating
-the the situations in which tools ``disappear'' years
+the situations in which tools ``disappear'' years
 after publication.
 At the same time, our study highlights some significant
 challenges to AECs by demonstrating the several
@@ -507,7 +507,7 @@ problems the way he had executed it:
 
 While the last point may seem odd -- why would a course project need
 value beyond its educational value? -- it's not unusual for 
-some software enginering courses to have added value,
+some software engineering courses to have added value,
 such as contributing to open source projects~\cite{pedroni2007open,meneely2008rose}.
 In the case of the present course, the instructor thought 
 that such system development would not be useful to most students
@@ -519,13 +519,13 @@ industrial software engineering experience.
 In the Fall of 2015, the instructor changed the course project
 to alleviate the problems described in the last subsection.
 In short, student teams were assigned tools described in a 
-a prior research paper at ICSE or FSE, the premier 
+prior research paper at ICSE or FSE, the premier 
 venues for software engineering research.
 Students were required to obtain the tools, get them running,
 and redistribute them.
 
 The instructor chose tool demonstration papers, rather than
-full techncial papers, for practical reasons.
+full technical papers, for practical reasons.
 Full technical papers may not present a tool; for 
 instance, a purely qualitative study that reports on 
 empirical findings may have no software to go along with it.
@@ -561,7 +561,7 @@ code or binaries for the tools, the technologies involved in the
 tool's creation, and a rough estimate of how 
 difficult the team thought it would be to get the tool working.
 Teams put this information on a shared spreadsheet with one row per paper.
-We collected papers from from 2014, the most recent year either ICSE or FSE
+We collected papers from 2014, the most recent year either ICSE or FSE
 papers will officially posted online, to 2009.
 In total, we collected 188 papers from 12 conferences.
 
@@ -687,7 +687,7 @@ of tools, and the process would start again.
 Third, the tool certified as ``unworkable'' would be made available 
 to the other teams to try to get working.
 
-The instructor created a disincentive for students to unnecessariyl 
+The instructor created a disincentive for students to unnecessarily 
 certify a tool as unworkable.
 If a team got an unworkable tool working, the team that certified it as  
 unworkable had their final course grade reduced by a minor 
@@ -714,7 +714,7 @@ The grading rubric for the image~\cite{vm}
 additionally specified that minimal work is required
 on the part of the user to see the tool in action,
 that the technology stack does not contain any proprietary 
-software that is not not stricly necessary,
+software that is not strictly necessary,
 and that the image is as small as possible.
 
 % there was a second VM submission
@@ -882,7 +882,7 @@ The technical work was conducted primarily by the students.
 
 \section{Example Tool}
 
-In this section, we exhibit one workng tool.
+In this section, we exhibit one working tool.
 Figure~\ref{fig:jstar} shows our GitHub page for
 the tool jStar-eclipse~\cite{jstar}.
 This page shows that we forked
@@ -892,7 +892,7 @@ the contents of the original readme
 (the first two lines under the title),
 links to some original resources,
 and acknowledgements.
-It also states that the repsoitory contains
+It also states that the repository contains
 the source code, a link to the original tool,
 binaries, and an external link to our virtual
 machine. 
@@ -904,7 +904,7 @@ machine.
   \caption{Our forked repository for a jStar-eclipse.}\label{fig:jstar}
 \end{figure}
 
-Figure~\ref{fig:vagrant} shows an the Vagrant script and 
+Figure~\ref{fig:vagrant} shows the Vagrant script and 
 part of an external script that builds the virtual machine.
 The vagrant script installs a plugin, 
 uses a base virtual machine image from the boxcutter 
@@ -1005,7 +1005,7 @@ Because a significant portion of participants' time was
 spent corresponding with the researchers,
 the survey also asked teams about their email interactions.
 Overall, teams sent emails for \emailsPercentSent of tools.
-Teams sent a median of \emailsSent and recieved 
+Teams sent a median of \emailsSent and received 
 a median of \emailsRecieved emails from each researcher.
 Figure~\ref{fig:emailSnR} summarizes the number of emails
 we sent and received, where the size of each dot
@@ -1054,7 +1054,7 @@ apart from our GitHub repositories.
 \onlineNotAvail of tools had no source code available 
 on line.
 \onlinePersonalSite of tools had source code hosted
-on an researcher's personal website.
+on a researcher's personal website.
 Many tools were available on open code repositories:
 \onlineGitHub on GitHub, 
 \onlineGcode on Google Code,
@@ -1088,13 +1088,13 @@ license keys and
 an old version of a dependency.
 
 For \unworkNoResponseToAsk tools, teams reported asking for a tool,
-but recieving no response from the researchers.
+but receiving no response from the researchers.
 For \unworkTooLate tools, teams eventually got a response with the tool, 
 but it was  too late (more than 7 days after initial contact).
 \unworkInternal tools were not available outside the organization
 they were developed in.
 \unworkPay tools had software dependencies on for-pay tools; 
-the may have worked if we had been willing to pay 
+they may have worked if we had been willing to pay 
 for the dependencies.
 
 Several tools were not available to us, 
@@ -1129,7 +1129,7 @@ and \emailsAnnoyed seemed annoyed.
 \subsubsection{Technical Challenges}
 
 In total, teams marked \working tools as working.
-The remaing tools were marked ``unworkable'' for a 
+The remaining tools were marked ``unworkable'' for a 
 several of reasons.
 The most common reason teams marked tools as unworkable
 was that the teams could not get the tools 
@@ -1160,7 +1160,7 @@ surrounding each tool and the software it depends on.
 
 \redistPermissionArtifact tools were open-sourced, 
 under a variety of licenses, making them appropriate
-for redistirubtion in virtual machines.
+for redistribution in virtual machines.
 Common licenses were:
 \licenseEPL had an Eclipse Public License license,
 \licenseMIT had an MIT license,

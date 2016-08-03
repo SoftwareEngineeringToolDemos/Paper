@@ -424,11 +424,13 @@ fundamental reasons tools cannot be archived.
 
 \section{Research Questions}
 
-Henceforth, we will simply say \textit{tool}
+In this paper, we will simply say \emph{tool}
 to refer to software engineering tools presented at
 the International Conference on Software Engineering
 or Foundations of Software Engineering in their
 respective tool demonstration tracks.
+We will also use the term \emph{researchers} to refer to 
+the creators of the tool described in the paper. 
 
 \begin{enumerate}
   \item How much effort is required to get tools to work?
@@ -595,18 +597,18 @@ Teams were instructed to first try to
 obtain the tool from links in the paper itself or via
 the web.
 If teams could not find the tool, the teams
-were instructed to ask the authors, using an email
+were instructed to ask the researchers, using an email
 template show in Figure~\ref{fig:email}.
-To minimize communication with the authors, 
-the email contained requests for several author
-piece of information, the need for which will become 
+To minimize communication with the researchers, 
+the email contained requests for several
+pieces of information, the need for which will become 
 clear later in this section.
 Students were instructed to customize this template,
 but to use it as a starting point. 
 Full instructions for use of this template can be found 
 online.\footnote{\url{https://docs.google.com/document/d/1dWvHS8gf37MgYafqOSl3BJzHYkdG1BHgDT4CYe_QN1I/edit?usp=sharing}}
 Teams were asked to include the instructor in
-all communications with authors.
+all communications with researchers.
 
 \begin{figure}[t]
 
@@ -659,11 +661,11 @@ Thank you very much,
 \vspace{1mm}\noindent
 $<$YOUR NAME$>$
 
-\caption{An email template used by students for obtaining information about tools from authors.}\label{fig:email}
+\caption{An email template used by students for obtaining information about tools from researchers.}\label{fig:email}
 
 \end{figure}
 
-%TODO how long did we give authors to provide the tools? 10 days? 7 days?
+%TODO how long did we give researchers to provide the tools? 10 days? 7 days?
 
 \subsubsection{Getting the Tools Working}
 
@@ -675,7 +677,7 @@ teams were required to get the tools ``working'' as it was described
 in the paper.
 Teams were allowed to use any means necessary to get the tools working,
 including asking classmates for help, but were discouraged from
-harassing the tools' authors.
+pestering the researchers.
 At the end of the two weeks, if the tool was obtained and working,
 teams certified that the tool as working on the spreadsheet.
 
@@ -753,7 +755,7 @@ which can be found
 online.\footnote{\url{https://github.com/SoftwareEngineeringToolDemos/}}
 
 If the original tool contained a license to redistribute
-the source code, or the paper authors gave us explicit
+the source code, or the researchers gave us explicit
 permission to do so, we redistributed that code 
 in our tool's repository.
 The same applied to the tools' binary.
@@ -761,7 +763,7 @@ If the tool was working,
 vagrant scripts were also included in the repository,
 regardless of whether we had permission to redistribute
 the tool; if we did not, users would have to contact the 
-original authors and drop in the tool (a binary, for instance)
+researchers and drop in the tool (a binary, for instance)
 for the script to work.
 Even if the tool was not available to us, we created
 a mostly empty repository, for consistency.
@@ -942,9 +944,9 @@ she only has to download the virtual machine image.
 
 In the remainder of the paper, we do not call out 
 any particular tool, but instead only speak of aggregates.
-The reason is that we do not wish to embarass any of the authors.
+The reason is that we do not wish to embarass any of the researchers.
 Accordingly, we have taken steps to make sure that data we have made 
-public with this paper does not embarass authors either.
+public with this paper does not embarass researchers either.
 For instance, while our GitHub repositories say when tools are 
 not available, we do not publicly indicate why they are
 not available.
@@ -955,12 +957,12 @@ not available.
 
 Through a survey near the end of the course, 
 teams estimated how long they spent
-corresponding with paper authors,
+corresponding with researchers,
 getting a tool to work,
 getting it to work in a virtual machine,
 and getting it to work with vagrant.
 The median time teams spent corresponding with
-authors was \durationCorresponding hours.
+researchers was \durationCorresponding hours.
 For tools where teams obtained the tool,
 they spent a median of \durationWorking hours
 trying to get it to work.
@@ -981,7 +983,7 @@ the GitHub repository, teams
 reported spending additional time 
 learning about their tools,
 searching for the tool on the web,
-waiting for author replies,
+waiting for researcher replies,
 obtaining the license for a tool,
 figuring out what dependencies a tool had,
 obtaining a Solaris base box for Vagrant,
@@ -995,29 +997,27 @@ getting a tool to work with a variety of examples.
 \end{figure}
 
 Because a significant portion of participants' time was
-spent corresponding with the authors,
+spent corresponding with the researchers,
 the survey also asked teams about their email interactions.
 Overall, teams sent emails for \emailsPercentSent of tools.
 Teams sent a median of \emailsSent and recieved 
-a median of \emailsRecieved emails from each author.
+a median of \emailsRecieved emails from each researcher.
 Figure~\ref{fig:emailSnR} summarizes the number of emails
 we sent and received, where the size of each dot
 represents the number of tools that had
 that many emails sent and received.
 We see that, overall, few emails were required
-and authors appeared generally responsive.
-
-%TODO authors -> researchers
+and researchers appeared generally responsive.
 
 The effort spent to get a tool working was not only
 borne by us, but also the researchers who 
 read and responed to our emails.
-To minimize authors' effort, we did not ask authors directly.
-Instead, we asked teams to estimate how much time authors spent 
+To minimize researchers' effort, we did not ask researchers directly.
+Instead, we asked teams to estimate how much time researchers spent 
 reading and responding to our emails, including time for 
 any background work such as restarting servers.
 Teams estimated that a median of \durationAuthorResponse minutes 
-was spent, with \durationAuthorResponseCountHigh tool authors having
+was spent, with \durationAuthorResponseCountHigh researchers having
 to spend more than an hour.
 
 \subsection{RQ2: Barriers to Getting Tools Working}
@@ -1029,7 +1029,7 @@ contained links to online information about their tools.
 Team also found that \papersWithLinksDead papers
 had links that were no longer functional,
 where \papersWithLinksRevived of those links
-being fixed after teams emailed the papers' authors.
+being fixed after teams emailed the researchers.
 
 When it came to obtaining the tools, 42\%
 could be obtained from links in 
@@ -1038,9 +1038,9 @@ the papers directly.
 links in the papers themselves, but could be
 from searching the web.
 When those failed, another \obtainEmail were 
-obtained after emailing the authors.
+obtained after emailing the researchers.
 In doing so, \contactFixLink links to tools 
-were fixed by the tools' authors.
+were fixed by the tools' researchers.
 \obtainNot of tools could not be obtained
 by teams at all.
 
@@ -1049,7 +1049,7 @@ apart from our GitHub repositories.
 \onlineNotAvail of tools had no source code available 
 on line.
 \onlinePersonalSite of tools had source code hosted
-on an author's personal website.
+on an researcher's personal website.
 Many tools were available on open code repositories:
 \onlineGitHub on GitHub, 
 \onlineGcode on Google Code,
@@ -1058,7 +1058,7 @@ Many tools were available on open code repositories:
 and \onlineCodeplex on CodePlex.
 Of these, \contactHosted tools began hosting 
 on a public repository after
-we contacted the authors.
+we contacted the researchers.
 
 Even when tools were ostensibly available,
 sometimes critical pieces were missing,
@@ -1069,13 +1069,13 @@ information about IDE compatibility,
 sample input,
 and steps required for installation. 
 
-\subsubsection{Author Compliance}
+\subsubsection{Researcher Compliance}
 
-While authors were generally responsive to emails,
+While researchers were generally responsive to emails,
 they were not necessarily responsive or compliant 
 with the requests contained in those emails.
-Figure~\ref{fig:requests} lists what teams requested from authors
-(horizontally) and whether authors complied (colors).
+Figure~\ref{fig:requests} lists what teams requested from researchers
+(horizontally) and whether researchers complied (colors).
 Overall, each kind of request was met with substantial non-response and
 non-compliance.
 Beyond these requests, teams reported needing to ask for 
@@ -1083,7 +1083,7 @@ license keys and
 an old version of a dependency.
 
 For \unworkNoResponseToAsk tools, teams reported asking for a tool,
-but recieving no response from the authors.
+but recieving no response from the researchers.
 For \unworkTooLate tools, teams eventually got a response with the tool, 
 but it was  too late.
 %TODO how late is too late?
@@ -1094,21 +1094,21 @@ the may have worked if we had been willing to pay
 for the dependencies.
 
 Several tools were not available to us, 
-and the authors were unwilling or unable to do so.
-For two tools, the author was simply unavailable,
+and the researchers were unwilling or unable to do so.
+For two tools, the researcher was simply unavailable,
 without further explanation.
-For one tool, the author was uncomfortable making 
+For one tool, the researcher was uncomfortable making 
 the tool available.
-For another, the author said the tool was only a prototype.
-For another, the author stated that the tool had too
+For another, the researcher said the tool was only a prototype.
+For another, the researcher stated that the tool had too
 many dependencies with other tools.
-For another, the author stated that the tool does not
+For another, the researcher stated that the tool does not
 exist anymore.
 
 \begin{figure}[!t]
   \centering
     \includegraphics[width=0.5\textwidth]{requestPlot.pdf}
-  \caption{Authors compliance with teams' tool requests.}\label{fig:requests}
+  \caption{Researchers compliance with teams' tool requests.}\label{fig:requests}
 \end{figure}
 
 %TODO should check to see which projects have licenses, 
@@ -1117,7 +1117,7 @@ exist anymore.
 %TODO: binary/executable for consistency throughout paper
 
 Teams also reported about the tone of the response they received from 
-authors.
+researchers.
 Teams felt that \emailsHelpful of responses were helpful and
 \emailsFriendly were friendly.
 Only \emailsIntimidating felt the responses were intimidating
@@ -1137,14 +1137,14 @@ the way the downloaded tool worked and the way
 it was described in the paper.
 A common problem for these tools was dependencies on
 software whose versions were unspecified 
-(and at least once forgotten by the author), and teams
+(and at least once forgotten by the researcher), and teams
 failed to get the tools working with the versions they
 tried.
 Teams also described having issues with 
 tool configuration,
 missing functionality, and
 missing or corrupted program files or data.
-After contacting the authors, teams reported that authors 
+After contacting the researchers, teams reported that researchers 
 fixed bugs in \contactFixBug tools,
 fixed deployment issues for \contactFixDepl tools,
 and fixed some problems with dependencies.
@@ -1169,15 +1169,15 @@ Common licenses were:
 \licenseGPLThree had a GPL 3.0 license,
 \licenseLGPL had a LGPL 2.0 license,
 \licenseMPL had a Microsoft Public License.
-Authors added open source licenses to \contactOSSed tools
+Researchers added open source licenses to \contactOSSed tools
 after we contacted them by email.	
 Although they did not have an explicit license,
-authors of \redistPermissionEmail tools granted us
+researchers of \redistPermissionEmail tools granted us
 permission to redistribute via email.
 Two tools were freely available online
-with an open source license, but the authors of those
-tools specifically asked us \emph{not} to redistribute the
-tool; although we honored the authors' requests,
+with an open source license, but the researchers
+specifically asked us \emph{not} to redistribute the
+tool; although we honored the researchers' requests,
 the requests nonetheless directly conflicts
 with those tools' licenses.  
 
@@ -1203,9 +1203,9 @@ A total of 62 repositories
 % based on https://github.com/search?q=org%3ASoftwareEngineeringToolDemos+Vagrant.configure&ref=searchresults&type=Code&utf8=%E2%9C%93
 contain vagrant scripts to build 
 virtual machines that contain the tools. 
-%TODO One author said tool just doesn't exist anymore.
-%TODO Another author had to dig tool out of long term archive.
-%TODO Several authors (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
+%TODO One researcher said tool just doesn't exist anymore.
+%TODO Another researcher had to dig tool out of long term archive.
+%TODO Several researchers (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
 
 \subsection{RQ4: Classroom}
 
@@ -1333,7 +1333,7 @@ proposition for untenured instructors.
 
 \section{Discussion}
 
-What are the implications for authors? For conferences?
+What are the implications for researchers? For conferences?
 
 Come back to interesting findings:
 * Services (appendix)
@@ -1400,7 +1400,7 @@ In total, for \serviceRunning tools, teams
 reported that the service was running when the teams tried
 to access it.
 For \serviceRunningLater tools, teams reported that the service
-was not running, but the authors got the service running
+was not running, but the researchers got the service running
 after the teams emailed them.
 For \serviceRunningNever tools, teams reported that the service
 never worked when they tried it.  

@@ -169,7 +169,7 @@ Many innovative software engineering tools appear at the field's premier venues,
 International Software Engineering Conference (ICSE) and the 
 Foundations of Software Engineering (FSE).
 But what happens to these tools after they are presented?
-In this paper, we describe a class project where we spent 
+In this paper, we describe a course project where we spent 
 thousands of person hours
 trying to obtain, download, use, and repackage \totalToolsTried
 tools from ICSE and FSE's tool demonstration tracks from
@@ -265,7 +265,7 @@ contributions in this paper:
 %TODO more theory here
 %See Tim's paper he sent
 
-Our work is one specific foray into the topic of replicability
+Our study is one specific foray into the topic of replicability
 in science, an area whose importance researchers and the public 
 increasingly cite.
 Ince and colleagues ``argue that, with some exceptions, anything less 
@@ -295,7 +295,7 @@ replicability and reproducibility~\cite{acmArtifactPolicy}.
 But because few replication studies exist in computer science,
 the motivation for this policy is based on studies
 ``primarily in the biomedical field.''
-Our work provides data to inform such evolving policies.
+Our study provides data to inform such evolving policies.
 
 \subsection{Replicability Studies in Computer Science}
 
@@ -308,10 +308,10 @@ implementations~\cite{kovacevic2007encourage}.
 Later, Vanderwalle and Kova{\v{c}}evi{\'c} repeated that study on 134 
 image processing papers and found that 84\% provided implementation details
 and 9\% provided code~\cite{vandewalle2009reproducible}. 
-Our work differs in that we went beyond finding out whether code was available;
+Our study differs in that we went beyond finding out whether code was available;
 we ran and repackaged that code.
 
-Callberg and Proebsting's recent replicability work~\cite{collberg2016repeatability,proebsting2015repeatability},
+Callberg and Proebsting's recent replicability study~\cite{collberg2016repeatability,proebsting2015repeatability},
 published after we had completed our study, is most similar to ours. 
 In it, the authors examined the systems described in 
 601 papers from 13 systems conferences from 2011 to 2013
@@ -341,7 +341,7 @@ that:
 \noindent
 Apart from studying tool demonstrations from software engineering venues
 rather than technical papers from systems venues,
-our work primarily complements Callberg and Proebsting's work in two
+our study primarily complements Callberg and Proebsting's study in two
 ways.
 First, we used a stricter standard of acceptance; rather than just building
 the tool, we verified that the tool ran as described in the original paper.
@@ -364,7 +364,7 @@ performing the analysis has a strong effect on performance~\cite{shepperd}.
 Likewise, Tantithamthavorn and colleagues' replication of this meta-study
 confirmed these results, but explained the problem as arising from 
 research groups reusing datasets and metrics~\cite{tantithamthavorn}.
-Our work complements these papers in that we evaluate a wider
+Our study complements these papers in that we evaluate a wider
 variety of software engineering tools.
 
 \subsection{Artifact Evaluation Committees}
@@ -389,9 +389,8 @@ They find that typically about half of authors of accepted papers
 choose to submit artifacts, and that acceptance rates for those
 artifacts vary substantially.
 
-The results of AECs and the work described
-in this paper have similar goals and technical
-approaches.
+The results of AECs and our study have 
+similar goals and technical approaches.
 Both aim to evaluate the artifact's 
 consistency with the paper,
 completeness,
@@ -400,25 +399,25 @@ and ease of use.\footnote{\url{http://evaluate.inf.usi.ch/artifacts}}
 From a technical standpoint, AECs generally  
 encourage packaging of artifacts in virtual machines.
 
-However, AECs and our work are different in several
+However, AECs and our study are different in several
 ways.
 AECs sometimes evaluate non-tools, such as data analysis scripts; 
-our work evaluates only software engineering tools.
+our study evaluates only software engineering tools.
 AECs report only data from artifacts that authors choose to submit;
 we report data about all tools published at a 
 conference's tool demonstration track.
 AECs evaluate artifacts packaged by the authors themselves;
 we report on tools that we package ourselves as outsiders.
 AECs aim to evaluate artifacts during publication;
-our work aims to evaluate tools years after publication.
+our study aims to evaluate tools years after publication.
 AECs do not require the public distribution of artifacts;
 distribution of artifacts is one of our primary goals.
 
 Regardless of the similarities and differences,
-our work motivates the need for AECs by demonstrating
+our study motivates the need for AECs by demonstrating
 the the situations in which tools ``disappear'' years
 after publication.
-At the same time, our work highlights some significant
+At the same time, our study highlights some significant
 challenges to AECs by demonstrating the several
 fundamental reasons tools cannot be archived. 
 
@@ -469,8 +468,6 @@ in prior offerings of the course (Section~\ref{sec:priorProj})
 and in the offering described in this paper (Section~\ref{sec:thisProj}).
 
 \subsection{Prior Course Project and Criticism}\label{sec:priorProj}
-
-%TODO experience report, rather than study? action research?
 
 In prior offerings of the course,
 students were essentially given two project offerings.
@@ -1117,8 +1114,6 @@ exist anymore.
 %TODO should check to see which projects have licenses, 
 %and perhaps students didn't need to send emails
 
-%TODO: binary/executable for consistency throughout paper
-
 Teams also reported about the tone of the response they received from 
 researchers.
 Teams felt that \emailsHelpful of responses were helpful and
@@ -1206,9 +1201,6 @@ A total of 62 repositories
 % based on https://github.com/search?q=org%3ASoftwareEngineeringToolDemos+Vagrant.configure&ref=searchresults&type=Code&utf8=%E2%9C%93
 contain vagrant scripts to build 
 virtual machines that contain the tools. 
-%TODO One researcher said tool just doesn't exist anymore.
-%TODO Another researcher had to dig tool out of long term archive.
-%TODO Several researchers (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
 
 \subsection{RQ4: Classroom}
 
@@ -1345,6 +1337,10 @@ Come back to interesting findings:
 * OSS licenses, but please don't redistribute
 * Email is soooo bad; non-response vs. non-compliance. lots of requests just ``got lost''
 * Should AECs use vagrant scripts? Good for archival purposes.
+* One researcher said tool just doesn't exist anymore.
+* Another researcher had to dig tool out of long term archive.
+* Several researchers (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
+* Threats: quality, etc (See Shriram's replication to demonstrate problems). Data reliability.
 
 \subsection{Implications for Research}
 

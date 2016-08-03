@@ -2,6 +2,7 @@
 \usepackage{xspace}
 \usepackage{url}
 \usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
 
 \DeclareGraphicsExtensions{.pdf,.png}
 
@@ -611,6 +612,7 @@ Teams were asked to include the instructor in
 all communications with researchers.
 
 \begin{figure}[t]
+\fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxrule-2\fboxsep}
 
 \noindent
 To: $<$AUTHORS OF PAPER, BUT NOT MORE THAN THE FIRST 5 AUTHORS$>$
@@ -660,6 +662,7 @@ Thank you very much,
 
 \vspace{1mm}\noindent
 $<$YOUR NAME$>$
+\end{minipage}}
 
 \caption{An email template used by students for obtaining information about tools from researchers.}\label{fig:email}
 

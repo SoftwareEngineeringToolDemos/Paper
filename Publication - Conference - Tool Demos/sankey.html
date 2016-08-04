@@ -1,0 +1,55 @@
+<html>
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 900px; height: 300px;"></div>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+       [ 'All Tools', 'Link', 2 ],
+       [ 'All Tools', 'Search', 2 ],
+       [ 'All Tools', 'Email', 2 ],
+       [ 'Link', 'Obtained', 2 ],
+       [ 'Search', 'Obtained', 2 ],
+       [ 'Email', 'Obtained', 2 ],
+       
+       [ 'All Tools', 'No Comply', 1 ],
+       [ 'All Tools', 'No Response', 1 ],
+       [ 'No Comply', 'Not Obtained', 1 ],
+       [ 'No Response', 'Not Obtained', 1 ],
+       [ 'Obtained', 'Unworkable', 5 ],
+       
+       [ 'Obtained', 'Workable', 5 ],
+       [ 'Workable', 'Open Source License', 1 ],
+       [ 'Workable', 'Verbal Permission', 1 ],
+       [ 'Open Source License', 'Released', 1 ],
+       [ 'Verbal Permission', 'Released', 1 ],
+       
+       [ 'Workable', 'No Permission Response', 1 ],
+       [ 'Workable', 'Permission Denied', 1 ],
+       [ 'Workable', 'Open Source, Permission Denied', 1 ],
+       [ 'No Permission Response', 'Not Released', 1 ],
+       [ 'Permission Denied', 'Not Released', 1 ],
+       [ 'Open Source, Permission Denied', 'Not Released', 1 ]
+    ]);
+
+    // Set chart options
+    var options = {
+      width: 900,
+      sankey: {iterations: 10000},
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</body>
+</html>

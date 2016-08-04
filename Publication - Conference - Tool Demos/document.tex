@@ -1270,13 +1270,42 @@ proposition for untenured instructors.
 
 \section{Discussion}
 
-Come back to interesting findings:
-* Services (appendix)
-* license things, people!
-* OSS licenses, but please don't redistribute
 * Email is soooo bad; non-response vs. non-compliance. lots of requests just ``got lost''
 * Should AECs use Vagrant scripts? Good for archival purposes. Sidestepped Windows licensing issues.
-* Thanks for permission to redistribute, but it's legally a pretty grey area.
+* Have we really solved the bitrot problem? Do VMs bitrot?
+* Consider problem of Topaz (?), system that maybe had circular menus; but what did they look like, and what were they for.
+* Arguably as SE researchers we should be the best!
+* What should we require for demos?
+* How does this extend to main track papers?
+
+\subsection{On Software Licensing}
+
+At several points during the project, software licensing posed significant
+problems for redistributing tools.
+
+First, we were surprised that several researchers asked us not to redistribute
+their tools, even though those tools' licenses explicitly allowed for redistribution.
+They provided essentially two rationales for this.
+One was that, although they initially chose an open source license, 
+their university's tech transfer office later advised them not to make the source code available.
+The other was that they did not want potential tool users to become confused 
+because the source code was stored in two places (in their repository, and in ours).
+It seems that these authors did not really want an open source license
+in the first place; perhaps instead they should have given their software
+no license at all or simply asserted copyright over it.
+
+Second, several researchers provided us explicit permission to redistribute their tools,
+but without an explicit open source license, this raises a number of questions.
+Can a third party who downloads our virtual machine with the researchers' tool use the tool or any purpose?
+Can a third party redistribute the tool?
+If so, how is that third party supposed to know about our private communication?
+These questions underscore the need for researchers to explicitly license their tools
+when they are released.
+
+Third, dependencies on commercial software, such as Microsoft Windows, made it
+impossible for us to redistribute virtual machines.
+However, Vagrant provided a nice solution to this problem, since Vagrant scripts
+use
 
 \subsection{Tools as Unreachable Services}
 
@@ -1373,37 +1402,6 @@ up with participants who reported them, but some participants
 were unresponsive.
 Because we are uncertain of the veracity of such outliers,
 we include them nonetheless.
-
-\subsection{Implications for Research}
-
-Arguably as SE researchers we should be the best!
-
-From perspective of someone making conference, it's 
-desirable to make it easier to use tools.
-
-What do we require for demos?
-
-How does this extend to main track papers?
-
-Have we really solved the bitrot problem?
-Consider problem of Topaz (?), system that
-maybe had circular menus; but what did they
-look like, and what were they for.
-
-How does this jive with current effort for artifact
-evaluation committees?
-Complementary; 
-
-\subsection{Implications for Education}
-
-\subsection{Implications for Practice}
-
-Making it easy to demo SE tools would be good for:
-* those who want to try a vendor's tools
-*  
-
-Challenges:
-* like elsewhere, get over operating system problems
 
 \section{Conclusions}
 

@@ -38,11 +38,12 @@
 \newcommand{\obtainNot}{20\%\xspace}
 \newcommand{\onlineGitHub}{25\%\xspace}
 \newcommand{\onlineSourceforge}{3\%\xspace}
-\newcommand{\onlineGcode}{4\%\xspace}
+\newcommand{\onlineGcode}{2\%\xspace}
 \newcommand{\onlinePersonalSite}{28\%\xspace}
 \newcommand{\onlineNotAvail}{39\%\xspace}
 \newcommand{\onlineCodeplex}{2\%\xspace}
 \newcommand{\onlineBitbucket}{3\%\xspace}
+\newcommand{\onlineJustGcode}{2\xspace}
 \newcommand{\working}{60\%\xspace}
 \newcommand{\workingNum}{86\xspace}
 \newcommand{\totalToolsTried}{143\xspace}
@@ -67,6 +68,7 @@
 \newcommand{\depWindows}{22\xspace}
 \newcommand{\depVS}{6\xspace}
 \newcommand{\permissionToRedistribute}{49\xspace}
+
 
 \newcommand{\projectLikeThis}{45\%\xspace}
 \newcommand{\projectLikeOther}{26\%\xspace}
@@ -1268,20 +1270,71 @@ proposition for untenured instructors.
 
 \section{Discussion}
 
-What are the implications for researchers? For conferences?
-
 Come back to interesting findings:
 * Services (appendix)
-* Disappearing tools (hard drive, google code, unexplained)
 * license things, people!
 * OSS licenses, but please don't redistribute
 * Email is soooo bad; non-response vs. non-compliance. lots of requests just ``got lost''
 * Should AECs use Vagrant scripts? Good for archival purposes. Sidestepped Windows licensing issues.
-* One researcher said tool just doesn't exist anymore.
-* Another researcher had to dig tool out of long term archive.
-* Several researchers (what percent?) has tools hosted on Google code, even though it was dying. Did we save 'em?
 * Thanks for permission to redistribute, but it's legally a pretty grey area.
-* Threats: quality, etc (See Shriram's replication to demonstrate problems). Data reliability.
+
+\subsection{Tools as Unreachable Services}
+
+Several of the tools we analyzed were a service or had a
+service component; for instance, several tools
+ran as web applications on the creator's website.
+In total, for \serviceRunning tools, teams 
+reported that the service was running when the teams tried
+to access it.
+For \serviceRunningLater tools, teams reported that the service
+was not running, but the researchers got the service running
+after the teams emailed them.
+For \serviceRunningNever tools, teams reported that the service
+never worked when they tried it. 
+
+While services may excel in convenience to the user, 
+they can do so only if they are running.
+In a sense, non-working services are worse than non-working source code;
+at least with source code, a user who wants to try the tool can 
+at least modify the code and resolve dependencies manually.
+With a tool as a service, the user's success is entirely dictated
+by the researcher, who, as our observations suggest, is often
+unresponsive or noncompliant. 
+Thus, we cannot recommend services as  way for software
+engineering researchers to release their tools,
+at least without also making the underlying software for 
+the service available as well.  
+
+\subsection{Tools Do Not Keep Well}
+
+This study illustrates some interesting points about how well tools
+are archived for posterity, even those in those from only a few years ago.
+Two tools illustrated archiving failure.
+One researcher told us the tool was simply no longer available.
+Another researcher told us that the tool's server crashed and they
+would need to locate the tool on a backup; that researcher never got back to us.
+But these only illustrate explicit failures -- there may be others 
+that we were unable to observe.
+For instance, perhaps ``the tool was just a prototype'' is a euphamism for 
+``we don't know where it is.''
+And the researchers who did not respond to our emails 
+could have lost their tools as well.
+
+We also encountered systematic near-failures of tool archives.
+Specifically, \onlineJustGcode of tools were hosted on Google Code
+and no where else.
+Because Google is retiring the hosting site, after 2016,
+they no longer guarantee that these tools will be available.
+Thus, if we hadn't cloned these tools' history to our repositories,
+they may have been lost forever.
+And even then, there are no guarantees
+
+These observations underscore need for long-term archiving of research
+tools becaues the current archival practices are failing.
+ 
+\subsection{Threats to Validity}
+
+%Generalizability to other projects, students=researchers?
 
 Finally, threat to this research is the quality
 of the resulting software; 	
@@ -1355,32 +1408,15 @@ Challenges:
 \section{Conclusions}
 
 Some other things.
+We're critical of current practices, but we're just as guilty.
+We'll have to solve this altogether.
 
 \section*{Acknowledgments}
 
 Thanks to Tim Menzies, Gail Murphy, and Thomas Zimmermann
 for their helpful comments on drafts of this paper.  
 
-
 \bibliographystyle{abbrv}
-\bibliography{references}
-
-\section{Appendix}
-
-Here are some random results that didn't fit elsewhere.
-
-Several of the tools we analyzed were a service or had a
-service component; for instance, several tools
-ran as web applications on the creator's website.
-If the service is running, services provide a convenient way
-for users to try a tool.
-In total, for \serviceRunning tools, teams 
-reported that the service was running when the teams tried
-to access it.
-For \serviceRunningLater tools, teams reported that the service
-was not running, but the researchers got the service running
-after the teams emailed them.
-For \serviceRunningNever tools, teams reported that the service
-never worked when they tried it.  
+\bibliography{references} 
 
 \end{document}

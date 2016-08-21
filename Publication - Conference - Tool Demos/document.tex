@@ -110,26 +110,20 @@ software engineering tools; replication
 
 \section{Introduction}
 
-Software engineering research seeks to better
-understand how software is built and constructed.
-While such understanding in isolation can be insightful,
-ultimately the bulk of such research 
-aims to impact practice.
-To do so, researchers can create recommendations
-for new software engineering practices, can 
-create educational techniques and materials, 
-and can create tools.
+Software engineering research seeks to better understand how software is built
+and constructed. While such understanding in isolation can be insightful,
+ultimately the bulk of such research aims to impact practice. To do so,
+researchers can recommend new software engineering practices, design educational
+techniques and materials, and create tools.
 
-Arguably creating new tools is the most common
-way that software engineering researchers
-attempt to influence practice.
-% evidence? would be good to see what the primary contributions are of a recent ICSE or FSE?
-Broadly speaking, tools are software that can
-help design and build software.
-Examples include a tool that helps mobile application
-developers choose which devices to target~\cite{prada},
-a tool that checks the use of locks in multithreaded programs~\cite{ernst},
-and a tool that creates code from natural language text~\cite{desai}.
+Creating new tools is arguably the most common way that software engineering
+researchers attempt to influence practice. % evidence? would be good to see what
+% the primary contributions are of a recent ICSE or FSE?
+Broadly speaking, tools are software that can help design and build software.
+Examples include a tool that helps mobile application developers choose which
+devices to target~\cite{prada}, a tool that checks the use of locks in
+multithreaded programs~\cite{ernst}, and a tool that creates code from natural
+language text~\cite{desai}.
 
 While papers describe tools in software engineering venues,
 there are several reasons why software engineering researchers 
@@ -388,7 +382,7 @@ The department has about 200 PhD students and 450
 MS students in its graduate program.
 While graduate students are not required to
 take the course, it is one of seven core systems
-courses, from which students must take one course.
+courses, from which students must take one or two courses.
 The department does have a specialty MS degree
 track in software 
 engineering~\cite{mstrack},
@@ -717,7 +711,7 @@ on GitHub could be forked by the team,
 maintaining not just history but also an 
 explicit connection to the original repository.
 When original tools were hosted elsewhere, such
-as in subversion on Google Projects, 
+as in Subversion on Google Projects, 
 teams migrated source code history to GitHub.
 
 Teams added a readme file to each tool's repository
@@ -995,13 +989,13 @@ by teams at all.
 We also assessed where the source code for tools are available,
 apart from our GitHub repositories.
 \onlineNotAvail of tools had no source code available 
-on line.
+online.
 \onlinePersonalSite of tools had source code hosted
 on a researcher's personal website.
 Many tools were available on open code repositories:
 \onlineGitHub on GitHub, 
 \onlineGcode on Google Code,
-\onlineSourceforge on Souceforge,
+\onlineSourceforge on Sourceforge,
 \onlineBitbucket on Bitbucket,
 and \onlineCodeplex on CodePlex.
 Of these, researchers began hosting \contactHosted tools 
@@ -1300,7 +1294,7 @@ no license at all or simply asserted copyright over it.
 
 Second, several researchers provided us explicit permission to redistribute their tools,
 but without an explicit open source license, this raises a number of questions.
-Can a third party who downloads our virtual machine with the researchers' tool use the tool or any purpose?
+Can a third party who downloads our virtual machine with the researchers' tool use the tool for any purpose?
 Can a third party redistribute the tool?
 If so, how is that third party supposed to know about our private communication?
 These questions underscore the need for researchers to explicitly license their tools
@@ -1348,7 +1342,7 @@ Another researcher told us that the tool's server crashed and they
 would need to locate the tool on a backup; that researcher never got back to us.
 But these only illustrate explicit failures -- there may be others 
 that we were unable to observe.
-For instance, perhaps ``the tool was just a prototype'' is a euphamism for 
+For instance, perhaps ``the tool was just a prototype'' is a euphemism for 
 ``we don't know where it is.''
 And the researchers who did not respond to our emails 
 could have lost their tools as well.
@@ -1360,16 +1354,19 @@ Because Google is retiring the hosting site, after 2016,
 they no longer guarantee that these tools will be available.
 Thus, if we hadn't cloned these tools' history to our repositories,
 they may have been lost forever.
-And even then, there are no guarantees
+And even then, there are no guarantees that our copies could not be lost
+in a similar way.
 
 These observations underscore need for long-term archiving of research
-tools becaues the current archival practices are failing.
+tools because the current archival practices are failing.
+%What are the general patterns in what people are doing wrong, and
+%what are the best solutions to this problem?
  
 \subsection{Threats to Validity}
 
 %Generalizability to other projects, students=researchers?
 
-Finally, threat to this research is the quality
+Finally, a threat to this research is the quality
 of the resulting software; 	
 having more than 60 capable 
 graduate students repackaging tools enabled this study 

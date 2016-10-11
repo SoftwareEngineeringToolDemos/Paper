@@ -8,73 +8,71 @@
 
 \begin{document}
 
-\newcommand{\durationTotal}{6626\xspace}
+\newcommand{\durationTotal}{6362.5\xspace}
 \newcommand{\durationCorresponding}{2\xspace}
 \newcommand{\durationWorking}{10\xspace}
 \newcommand{\durationVM}{10\xspace}
 \newcommand{\durationVagrant}{15\xspace}
 \newcommand{\durationWorkingOnWorkable}{10\xspace}
 \newcommand{\durationWorkingOnUnWorkable}{10\xspace}
-\newcommand{\emailsSent}{3\xspace}
+\newcommand{\emailsSent}{3.5\xspace}
 \newcommand{\emailsRecieved}{2\xspace}
-\newcommand{\durationAuthorResponse}{15\xspace}
+\newcommand{\durationAuthorResponse}{20\xspace}
 \newcommand{\durationAuthorResponseCountHigh}{20\xspace}
-\newcommand{\emailsHelpful}{82\%\xspace}
+\newcommand{\emailsHelpful}{84\%\xspace}
 \newcommand{\emailsFriendly}{85\%\xspace}
-\newcommand{\emailsIntimidating}{4\%\xspace}
+\newcommand{\emailsIntimidating}{5\%\xspace}
 \newcommand{\emailsAnnoyed}{10\%\xspace}
-\newcommand{\emailsPercentSent}{92\%\xspace}
-\newcommand{\contactOSSed}{2\xspace}
+\newcommand{\emailsPercentSent}{94\%\xspace}
+\newcommand{\contactOSSed}{1\xspace}
 \newcommand{\contactFixLink}{3\xspace}
 \newcommand{\contactHosted}{4\xspace}
 \newcommand{\contactFixBug}{8\xspace}
 \newcommand{\contactFixDepl}{2\xspace}
-\newcommand{\papersWithLinks}{62\%\xspace}
-\newcommand{\papersWithLinksDead}{7\%\xspace}
+\newcommand{\papersWithLinks}{60\%\xspace}
+\newcommand{\papersWithLinksDead}{8\%\xspace}
 \newcommand{\papersWithLinksRevived}{44\%\xspace}
-\newcommand{\obtainPaper}{42\%\xspace}
-\newcommand{\obtainGoogle}{19\%\xspace}
-\newcommand{\obtainEmail}{20\%\xspace}
-\newcommand{\obtainNot}{20\%\xspace}
-\newcommand{\onlineGitHub}{25\%\xspace}
+\newcommand{\obtainPaper}{41\%\xspace}
+\newcommand{\obtainGoogle}{16\%\xspace}
+\newcommand{\obtainEmail}{22\%\xspace}
+\newcommand{\obtainNot}{22\%\xspace}
+\newcommand{\onlineGitHub}{22\%\xspace}
 \newcommand{\onlineSourceforge}{3\%\xspace}
 \newcommand{\onlineGcode}{2\%\xspace}
-\newcommand{\onlinePersonalSite}{28\%\xspace}
-\newcommand{\onlineNotAvail}{39\%\xspace}
+\newcommand{\onlinePersonalSite}{26\%\xspace}
+\newcommand{\onlineNotAvail}{42\%\xspace}
 \newcommand{\onlineCodeplex}{2\%\xspace}
 \newcommand{\onlineBitbucket}{3\%\xspace}
 \newcommand{\onlineJustGcode}{2\xspace}
-\newcommand{\working}{60\%\xspace}
-\newcommand{\workingNum}{86\xspace}
-\newcommand{\totalToolsTried}{143\xspace}
+\newcommand{\working}{58\%\xspace}
+\newcommand{\workingNum}{76\xspace}
+\newcommand{\totalToolsTried}{131\xspace}
 \newcommand{\unworkPay}{2\xspace}
 \newcommand{\unworkInternal}{9\xspace}
 \newcommand{\unworkNoResponseToAsk}{13\xspace}
 \newcommand{\unworkTooLate}{3\xspace}
-\newcommand{\unworkCouldntWorkIt}{19\xspace}
+\newcommand{\unworkCouldntWorkIt}{17\xspace}
 \newcommand{\serviceRunning}{8\xspace}
 \newcommand{\serviceRunningLater}{2\xspace}
 \newcommand{\serviceRunningNever}{4\xspace}
-\newcommand{\redistPermissionArtifact}{43\xspace}
-\newcommand{\redistPermissionEmail}{31\xspace}
-\newcommand{\licenseMIT}{7\xspace}
-\newcommand{\licenseGPL}{5\xspace}
-\newcommand{\licenseApache}{7\xspace}
-\newcommand{\licenseGPLThree}{4\xspace}
+\newcommand{\redistPermissionArtifact}{37\xspace}
+\newcommand{\redistPermissionEmail}{30\xspace}
+\newcommand{\licenseMIT}{6\xspace}
+\newcommand{\licenseGPL}{4\xspace}
+\newcommand{\licenseApache}{6\xspace}
+\newcommand{\licenseGPLThree}{3\xspace}
 \newcommand{\licenseBSD}{6\xspace}
 \newcommand{\licenseLGPL}{2\xspace}
 \newcommand{\licenseMPL}{2\xspace}
-\newcommand{\licenseEPL}{14\xspace}
-\newcommand{\depWindows}{22\xspace}
+\newcommand{\licenseEPL}{10\xspace}
+\newcommand{\depWindows}{20\xspace}
 \newcommand{\depVS}{6\xspace}
-\newcommand{\permissionToRedistribute}{49\xspace}
+\newcommand{\permissionToRedistribute}{44\xspace}
 
 
 \newcommand{\projectLikeThis}{45\%\xspace}
 \newcommand{\projectLikeOther}{26\%\xspace}
 \newcommand{\projectDontCare}{30\%\xspace}
-
-%TODO how are you dealing with the non-representative sample of tools from really early -- 2011?
 
 \title{Reviving \workingNum of \totalToolsTried of Tools from ICSE and FSE}
 
@@ -608,6 +606,14 @@ several things happened.
 First, the team must certify the tool as ``unworkable.''
 Second, the team would be assigned a new tool by moving down the list
 of tools, and the process would start again.
+In practice, students marked enough tools as unworkable that we could
+examine all tools presented through 2011, and even a few tools
+from 2010.
+We exclude tools from 2010 from our analysis presented in this paper
+because we did not analyze all tools from 2010 nor did we select
+a random sample.
+These tools from 2010 are present, however, in our GitHub repository
+and in our released virtual machines.  
 Third, the tool certified as ``unworkable'' would be made available 
 to the other teams to try to get working.
 
@@ -965,7 +971,7 @@ had links that were no longer functional,
 where \papersWithLinksRevived of those links
 being fixed after teams emailed the researchers.
 
-When it came to obtaining the tools, 42\%
+When it came to obtaining the tools, \obtainPaper
 could be obtained from links in 
 the papers directly.
 \obtainGoogle could not be obtained from
